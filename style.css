@@ -325,6 +325,20 @@ body {
   margin-top: 7rem;
   position: relative;
 }
+.seeMore_btn {
+  font-family: "Cerebri-Sans-Bold";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 22px;
+  font-size: 14px;
+  /* border-bottom: solid 2px black; */
+  text-decoration: underline;
+  text-underline-position: under;
+  text-align: right;
+  position: relative;
+  top: -3rem;
+  right: 1rem;
+}
 .countdown .countdownTimer {
   position: absolute;
   top: -3.2rem;
@@ -358,12 +372,14 @@ body {
   width: 95%;
   padding-top: 5rem;
 }
-.countdown .countdownCard {
+.countdown .countdownCard,
+.bigCollection .countdownCard {
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.countdown .countdownCard h3 {
+.countdown .countdownCard h3,
+.bigCollection .countdownCard h3 {
   font-family: "Cerebri-Sans-Regular";
   font-weight: 400;
   font-style: normal;
@@ -372,29 +388,33 @@ body {
   padding-top: 0.8rem;
 }
 .countdown .countdownCard .previousPrice,
-.countdown .countdownCard .discountedPrice {
+.countdown .countdownCard .discountedPrice,
+.bigCollection .countdownCard .previousPrice,
+.bigCollection .countdownCard .discountedPrice {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-weight: 500;
 }
-.countdown .countdownCard .previousPrice {
+.countdown .countdownCard .previousPrice,
+.bigCollection .countdownCard .previousPrice {
   font-size: 13px;
   line-height: 13px;
   color: #a3a3a3;
   text-decoration: line-through;
 }
-.countdown .countdownCard .discountedPrice {
+.countdown .countdownCard .discountedPrice,
+.bigCollection .countdownCard .discountedPrice {
   color: #e0510b;
   font-size: 17px;
   line-height: 17px;
 }
-.countdown .orange_btn-2 {
+.countdown .orange_btn-2,
+.bigCollection .orange_btn-2 {
   text-decoration: none;
   color: #fff;
   border: 1px solid transparent;
   display: inline-block;
-  width: 96%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
@@ -408,11 +428,37 @@ body {
   margin-top: 10px;
   margin-bottom: 40px;
 }
-.countdown .countdownCard .fav-icon {
+.countdown .countdownCard .fav-icon,
+.bigCollection .countdownCard .fav-icon {
   position: absolute;
   top: 5.6rem;
   right: 1.6rem;
   background-color: #fff;
   padding: 0.8rem;
   border-radius: 50%;
+}
+.bigCollection .countdownCard .fav-icon {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+/* bigCollection */
+.bigCollection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.9rem;
+  margin: 0 0.6rem;
+}
+.bigCollection__title {
+  font-family: "Cerebri-Sans-Bold";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  font-size: 20px;
+  margin-top: 6.8rem;
+  margin-bottom: 1.8rem;
+  margin-left: 0.6rem;
+}
+.bigCollection img {
+  width: 100%;
 }
