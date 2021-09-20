@@ -1,0 +1,418 @@
+@font-face {
+  font-family: "Cerebri-Sans-Regular";
+  src: url("./Cerebri.Sans.Pro/CerebriSansPro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Cerebri-Sans-Medium";
+  src: url("./Cerebri.Sans.Pro/CerebriSansPro-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Cerebri-Sans-Bold";
+  src: url("./Cerebri.Sans.Pro/CerebriSansPro-Bold.otf") format("opentype");
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@font-face {
+  font-family: "Cerebri-Sans-ExtraBold";
+  src: url("./Cerebri.Sans.Pro/CerebriSansPro-ExtraBold.otf") format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 15px;
+  color: #000;
+  background: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Upper Header */
+
+.wrapper {
+  display: grid;
+}
+.upper-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 1rem;
+  align-items: center;
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  font-size: 14px;
+}
+.main-menu,
+.follow-menu {
+  list-style: none;
+  display: flex;
+}
+.main-menu li a,
+.follow-menu li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 35px;
+}
+.main-menu li a {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  padding-right: 1.5rem;
+  margin-right: 1.5rem;
+}
+.main-menu li:nth-child(4) a {
+  border-right: none;
+}
+.follow-menu {
+  display: flex;
+  align-items: center;
+}
+.follow-menu li a {
+  padding-right: 15px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+.follow-menu li a i {
+  font-size: 12px;
+}
+
+.follow-menu li:first-child i {
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
+.follow-menu li:nth-child(2) i {
+  margin-left: 1.5rem;
+}
+.follow-menu li:first-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 13px 0;
+}
+.header .logo {
+  width: 10rem;
+  margin-right: 5rem;
+  margin-left: 1rem;
+}
+.searchBar {
+  width: 58%;
+  height: 40px;
+  padding: 10px 15px;
+  border: solid 1px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+}
+.searchBar::placeholder {
+  color: #a5a5a5;
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  font-size: 14px;
+}
+.btn {
+  background-color: #333;
+  height: 40px;
+  width: 4%;
+  color: #fff;
+  border: none;
+  margin-right: 2.7rem;
+}
+.loginDiv {
+  display: flex;
+  align-items: center;
+}
+.loginDiv h5 {
+  font-family: "Cerebri-Sans-Medium";
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  margin-right: 2.2rem;
+  font-weight: 400;
+}
+.loginDiv h5 i {
+  font-size: 1.4rem;
+  margin-right: 0.3rem;
+}
+.loginDiv i {
+  margin-right: 1.4rem;
+  font-size: 1.25rem;
+}
+/* Dark Links */
+
+.dark-links {
+  display: grid;
+  background-color: #2f2828;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Cerebri-Sans-Medium";
+}
+
+.dark-links .dark-menu {
+  display: flex;
+  list-style: none;
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.dark-links .dark-menu li a {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: 1.5rem;
+}
+/* Slider */
+.slider {
+  width: 100%;
+  height: 100%;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.3) translateY(11.5%);
+}
+
+/* Circles */
+
+.circles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 11.8%;
+  background-color: #f8f8f8;
+  padding: 8rem 4rem;
+  grid-gap: 4rem;
+}
+.circle img {
+  max-width: 100%;
+  padding: 1rem;
+  height: auto;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.card {
+  text-align: center;
+}
+.card h3 {
+  padding-top: 1rem;
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 600;
+  font-style: normal;
+  line-height: 31px;
+  font-size: 20px;
+}
+
+/* Collections */
+.collections {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+  grid-gap: 2rem;
+}
+.collections img {
+  max-width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+.collections__title {
+  padding-top: 6rem;
+  padding-bottom: 1rem;
+  font-family: "Cerebri-Sans-Medium";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 29px;
+  font-size: 25px;
+  text-align: center;
+}
+.collections h3 {
+  padding-top: 1rem;
+  font-family: "Cerebri-Sans-Medium";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 26px;
+  font-size: 22px;
+  text-align: center;
+}
+
+/* Discount */
+
+.discount {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  grid-gap: 1.8rem;
+  margin-top: 5.8rem;
+}
+
+.discount img {
+  width: 100%;
+  height: 100%;
+}
+.discount .leftDiscount,
+.discount .rightDiscount {
+  position: relative;
+}
+.discount .content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #fff;
+  /*padding: 3rem 9.8rem;*/
+  padding: 13% 15%;
+  color: #fff;
+}
+.discount .content p {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Cerebri-Sans-Bold";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 22px;
+  font-size: 14px;
+}
+.discount .content h2 {
+  text-align: center;
+  font-family: "Cerebri-Sans-Medium";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 60px;
+  font-size: 50px;
+}
+.discount .content .discountSpan {
+  padding-left: 1rem;
+}
+.discount .content a {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid transparent;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0rem 1.6rem;
+  border-radius: 100px;
+  background-color: #e0510b;
+  font-family: "Cerebri-Sans-Medium";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 38px;
+  font-size: 16px;
+}
+
+/* Countdown */
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 2px solid #695d4f;
+  padding: 0px 35px 40px;
+  border-radius: 8px;
+  margin: 0 1rem;
+  grid-gap: 1rem;
+  margin-top: 7rem;
+  position: relative;
+}
+.countdown .countdownTimer {
+  position: absolute;
+  top: -3.2rem;
+  left: 5rem;
+  padding: 2rem;
+  background-color: #fff;
+  align-items: center;
+  display: flex;
+}
+.countdown .countdownTimer h2 {
+  font-family: "Cerebri-Sans-ExtraBold";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 29px;
+  font-size: 24px;
+  margin-right: 2rem;
+}
+.countdownTimer_btn {
+  color: #fff;
+  background-color: #695d4f;
+  padding: 0rem 1.5rem;
+  text-decoration: none;
+  border-radius: 30px;
+  font-family: "Cerebri-Sans-Bold";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 45px;
+  font-size: 18px;
+}
+.countdown img {
+  width: 95%;
+  padding-top: 5rem;
+}
+.countdown .countdownCard {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.countdown .countdownCard h3 {
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 19px;
+  font-size: 16px;
+  padding-top: 0.8rem;
+}
+.countdown .countdownCard .previousPrice,
+.countdown .countdownCard .discountedPrice {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-weight: 500;
+}
+.countdown .countdownCard .previousPrice {
+  font-size: 13px;
+  line-height: 13px;
+  color: #a3a3a3;
+  text-decoration: line-through;
+}
+.countdown .countdownCard .discountedPrice {
+  color: #e0510b;
+  font-size: 17px;
+  line-height: 17px;
+}
+.countdown .orange_btn-2 {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid transparent;
+  display: inline-block;
+  width: 96%;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #e0510b;
+  font-family: "Cerebri-Sans-Bold";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 19px;
+  font-size: 12px;
+  padding: 7px 10px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.countdown .countdownCard .fav-icon {
+  position: absolute;
+  top: 5.6rem;
+  right: 1.6rem;
+  background-color: #fff;
+  padding: 0.8rem;
+  border-radius: 50%;
+}
