@@ -373,13 +373,15 @@ body {
   padding-top: 5rem;
 }
 .countdown .countdownCard,
-.bigCollection .countdownCard {
+.bigCollection .countdownCard,
+.bestSellers .row1 .countdownCard {
   justify-content: center;
   align-items: center;
   position: relative;
 }
 .countdown .countdownCard h3,
-.bigCollection .countdownCard h3 {
+.bigCollection .countdownCard h3,
+.bestSellers .row1 .countdownCard h3 {
   font-family: "Cerebri-Sans-Regular";
   font-weight: 400;
   font-style: normal;
@@ -390,26 +392,31 @@ body {
 .countdown .countdownCard .previousPrice,
 .countdown .countdownCard .discountedPrice,
 .bigCollection .countdownCard .previousPrice,
-.bigCollection .countdownCard .discountedPrice {
+.bigCollection .countdownCard .discountedPrice,
+.bestSellers .countdownCard .previousPrice,
+.bestSellers .countdownCard .discountedPrice {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 .countdown .countdownCard .previousPrice,
-.bigCollection .countdownCard .previousPrice {
+.bigCollection .countdownCard .previousPrice,
+.bestSellers .countdownCard .previousPrice {
   font-size: 13px;
   line-height: 13px;
   color: #a3a3a3;
   text-decoration: line-through;
 }
 .countdown .countdownCard .discountedPrice,
-.bigCollection .countdownCard .discountedPrice {
+.bigCollection .countdownCard .discountedPrice,
+.bestSellers .countdownCard .discountedPrice {
   color: #e0510b;
   font-size: 17px;
   line-height: 17px;
 }
 .countdown .orange_btn-2,
-.bigCollection .orange_btn-2 {
+.bigCollection .orange_btn-2,
+.bestSellers .orange_btn-2 {
   text-decoration: none;
   color: #fff;
   border: 1px solid transparent;
@@ -429,7 +436,8 @@ body {
   margin-bottom: 40px;
 }
 .countdown .countdownCard .fav-icon,
-.bigCollection .countdownCard .fav-icon {
+.bigCollection .countdownCard .fav-icon,
+.bestSellers .countdownCard .fav-icon {
   position: absolute;
   top: 5.6rem;
   right: 1.6rem;
@@ -438,6 +446,10 @@ body {
   border-radius: 50%;
 }
 .bigCollection .countdownCard .fav-icon {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.bestSellers .countdownCard .fav-icon {
   top: 0.5rem;
   right: 0.5rem;
 }
@@ -461,4 +473,109 @@ body {
 }
 .bigCollection img {
   width: 100%;
+}
+
+/* Subscription */
+
+.subscription {
+  margin-top: 10rem;
+  display: flex;
+  background-color: #695d4f;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin: 10rem 0 auto;
+  flex-wrap: nowrap;
+}
+.subscription i {
+  font-size: 5rem;
+  color: #fff;
+  margin-right: 1.5rem;
+  margin-left: 1.2rem;
+}
+.subscription h4 {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Cerebri-Sans-Bold";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 22px;
+  font-size: 18px;
+}
+.subscription .rightContent {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid rgba(204, 204, 204, 0.5);
+  padding-right: 4.5rem;
+  height: 8rem;
+}
+.subscription p {
+  width: 35%;
+  color: #fff;
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  font-size: 16px;
+  padding-left: 3rem;
+  padding-right: 6.5rem;
+}
+.subscription .subscription__input {
+  width: 50%;
+  line-height: 55px;
+  color: #a3a3a3;
+  border: none;
+}
+.subscription .subscription__input::placeholder {
+  padding-left: 1.2rem;
+  color: #a3a3b5;
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 55px;
+  font-size: 14px;
+}
+.subscription .subscription__btn {
+  width: 13.5%;
+  font-size: 12px;
+  line-height: 55px;
+  letter-spacing: 1.6px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Cerebri-Sans-Bold";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 55px;
+  font-size: 12px;
+  background-color: rgb(47, 40, 40);
+  border: none;
+}
+.subscription .btn:hover {
+  background-color: rgb(59, 59, 59);
+}
+
+/* bestSellers */
+.row1,
+.row2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.9rem;
+  margin: 0 0.6rem;
+  margin-bottom: -5rem;
+}
+.row1 {
+  margin-bottom: 2rem;
+}
+.row1 img,
+.row2 img {
+  width: 100%;
+}
+.bestSellers__title {
+  font-family: "Cerebri-Sans-Bold";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  font-size: 20px;
+  margin-top: 6.8rem;
+  margin-left: 0.6rem;
 }
