@@ -336,7 +336,7 @@ body {
   text-underline-position: under;
   text-align: right;
   position: relative;
-  top: -3rem;
+  top: -1rem;
   right: 1rem;
 }
 .countdown .countdownTimer {
@@ -448,6 +448,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.9rem;
   margin: 0 0.6rem;
+  margin-bottom: -5rem;
 }
 .bigCollection__title {
   font-family: "Cerebri-Sans-Bold";
@@ -456,7 +457,6 @@ body {
   line-height: 24px;
   font-size: 20px;
   margin-top: 6.8rem;
-  margin-bottom: 1.8rem;
   margin-left: 0.6rem;
 }
 .bigCollection img {
