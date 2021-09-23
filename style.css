@@ -555,6 +555,10 @@ body {
 }
 
 /* bestSellers */
+.bestSellers {
+  margin-bottom: 4rem;
+}
+
 .row1,
 .row2 {
   display: grid;
@@ -578,4 +582,212 @@ body {
   font-size: 20px;
   margin-top: 6.8rem;
   margin-left: 0.6rem;
+}
+
+/* Instagram */
+
+.instagram {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.instagram i {
+  font-size: 3.8rem;
+  margin-bottom: 1.2rem;
+}
+.instagram h2 {
+  font-family: "Cerebri-Sans-Medium";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 38px;
+  color: #000;
+  margin-bottom: 0.3rem;
+}
+.instagram p {
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 29px;
+  color: #444;
+}
+/* FooterSlider */
+
+.footerSlider {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 3rem;
+}
+
+.footerSlider img {
+  width: 100%;
+}
+.footerSlider .slideContent {
+  position: relative;
+}
+.footerSlider .slideContent .fav-icon {
+  font-size: 1.5rem;
+  opacity: 0.7;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #fff;
+  transform: rotate(270deg);
+}
+/* Payment */
+
+.payment {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 4.5rem;
+  padding: 0.2rem;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+}
+.payment .creditCard,
+.payment .security {
+  display: flex;
+  align-items: center;
+}
+.payment .creditCard i,
+.payment .security i {
+  font-size: 3.1rem;
+  color: #695d4f;
+  padding: 1rem 0.5rem;
+  padding-top: 0rem;
+}
+.payment .security i {
+  padding-right: 2rem;
+}
+.payment .creditContent {
+  padding: 1rem 0.5rem;
+}
+.payment .creditCard h3,
+.payment .security h3 {
+  font-family: "Cerebri-Sans-Medium";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 0.5rem;
+}
+.payment .creditCard p,
+.payment .security p {
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #a3a3a3;
+}
+/* UpperFooter */
+
+.upperFooter {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #f8f8f8;
+  padding-top: 1rem;
+}
+.upperFooter i {
+  font-size: 0.8rem;
+  background-color: #f1f1f1;
+  padding: 0.8rem;
+  border-radius: 50%;
+  text-align: start;
+  margin-bottom: 1.5rem;
+}
+.upperFooter .socialLinks,
+.upperFooter .categories,
+.upperFooter .communication,
+.upperFooter .policy {
+  border: 1px solid rgba(204, 204, 204, 0.5);
+}
+.upperFooter .socialLinks,
+.upperFooter .categories,
+.upperFooter .communication {
+  border-right: none;
+  border-top: none;
+}
+.upperFooter .categories,
+.upperFooter .communication,
+.upperFooter .policy {
+  padding: 2.5rem 2rem;
+}
+.upperFooter .categories li,
+.upperFooter .communication li,
+.upperFooter .policy li {
+  padding-bottom: 0.3rem;
+}
+.upperFooter .socialLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+}
+
+.upperFooter .socialLinks p {
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #a3a3a3;
+  margin-bottom: 1.5rem;
+}
+.upperFooter .socialLinks ul {
+  display: flex;
+  margin-top: 1rem;
+}
+.upperFooter .socialLinks ul li {
+  margin-right: 0.8rem;
+}
+.upperFooter .socialLinks ul li:last-child {
+  margin-right: 0;
+}
+.upperFooter ul {
+  list-style: none;
+}
+.upperFooter ul h4 {
+  font-family: "Cerebri-Sans-Bold";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 12px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.upperFooter ul a {
+  text-decoration: none;
+  color: #695d4f;
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+.upperFooter img {
+  width: 9.4rem;
+  margin-bottom: 1.5rem;
+}
+/* Footer */
+
+.footer {
+  display: flex;
+  padding: 1.6rem 0.9rem;
+  justify-content: space-between;
+}
+.footer img {
+  width: 15%;
+  height: auto;
+}
+.footer p {
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #a3a3a3;
 }
