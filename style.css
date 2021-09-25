@@ -98,6 +98,9 @@ body {
   align-items: center;
   padding: 13px 0;
 }
+.header .menu-icon {
+  display: none;
+}
 .header .logo {
   width: 10rem;
   margin-right: 5rem;
@@ -166,6 +169,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+.dark-links .dark-menu .close-btn {
+  display: none;
 }
 .dark-links .dark-menu li a {
   display: flex;
@@ -791,3 +797,103 @@ body {
   line-height: 24px;
   color: #a3a3a3;
 }
+
+/* Media Queries */
+
+@media (max-width: 1170px) {
+  .collections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bigCollection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bigCollection .countdownCard:last-child {
+    display: none;
+  }
+  .row1,
+  .row2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 990px) {
+  .upper-header {
+    display: none;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header .searchBar,
+  .header .btn,
+  .loginDiv h5 {
+    display: none;
+  }
+  .header .logo {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-left: 1.4rem;
+  }
+  .header .menu-icon {
+    display: inline-block;
+    margin-left: 2rem;
+  }
+  .dark-links .dark-menu .close-btn {
+    display: flex;
+    background-color: #695d4f;
+  }
+
+  .close-btn i {
+    font-size: 1.5rem;
+  }
+  .dark-links .dark-menu {
+    margin-left: 0.55rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .dark-links .dark-menu li a {
+    display: flex;
+    color: #000;
+    margin-right: 0rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #000;
+  }
+  .dark-links .dark-menu .close-btn a {
+    align-items: center;
+    font-family: "Cerebri-Sans-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    border: none;
+    color: #fff;
+    padding: 0rem;
+  }
+  .circles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .collections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bigCollection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bigCollection .countdownCard:last-child {
+    display: none;
+  }
+  .row1,
+  .row2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .row1 .countdownCard:last-child,
+  .row2 .countdownCard:last-child {
+    display: none;
+  }
+  /* tekrar bak */
+}
+/* mobile = max(765px) */
