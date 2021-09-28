@@ -52,9 +52,13 @@
 
       <!-- Header Start -->
       <header class="header">
-        <i class="menu-icon fas fa-bars"></i>
-        <img class="logo" src="./img/Hevin_Logo.svg" alt="logo" />
+        <div>
+          <label for="openSidebarMenu" class="sidebarIconToggle">
+            <i class="menu-icon fas fa-bars"></i>
+          </label>
+        </div>
 
+        <img class="logo" src="./img/Hevin_Logo.svg" alt="logo" />
         <input
           type="text"
           class="searchBar"
@@ -72,9 +76,6 @@
       <!-- DarkLinks Start -->
       <header class="dark-links">
         <ul class="dark-menu">
-          <li class="close-btn">
-            <a href="#">KAPAT <i class="fas fa-times"></i></a>
-          </li>
           <li><a href="#">çok satanlar</a></li>
           <li><a href="#">koleksiyonlar</a></li>
           <li><a href="#">oturma odası</a></li>
@@ -88,7 +89,46 @@
         </ul>
       </header>
       <!-- DarkLinks Finish -->
+      <!-- DarkLinks-Mobile Start -->
+      <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
 
+      <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
+          <li class="close-btn">
+            <label for="openSidebarMenu">
+              <div href="#" class="closeDiv">
+                <span>KAPAT</span>
+                <i class="fas fa-times"></i>
+              </div>
+            </label>
+          </li>
+
+          <li><a href="#">çok satanlar</a></li>
+          <li><a href="#">koleksiyonlar</a></li>
+          <li><a href="#">oturma odası</a></li>
+          <li><a href="#">yatak odası</a></li>
+          <li><a href="#">yemek odası</a></li>
+          <li><a href="#">tv üniteleri</a></li>
+          <li><a href="#">orta sehpalar</a></li>
+          <li><a href="#">tekil modüler</a></li>
+          <li><a href="#">kampanyalar</a></li>
+          <li><a href="#">fırsat ürünleri</a></li>
+        </ul>
+      </div>
+      <!-- DarkLinks-Mobile Finish -->
+
+      <!-- Mobile-Bottom-Menu Start -->
+
+      <section class="bottomMenu">
+        <ul>
+          <li><i class="fas fa-store"></i></li>
+          <li><i class="far fa-user"></i></li>
+          <li><i class="fas fa-search"></i></li>
+          <li><i class="far fa-heart"></i></li>
+        </ul>
+      </section>
+
+      <!-- Mobile-Bottom-Menu Finish -->
       <!-- Slider Start -->
       <section class="slider">
         <img src="./img/contentImage.jpg" alt="slider" />
