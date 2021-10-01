@@ -809,7 +809,6 @@ body {
 .bottomMenu {
   display: none;
 }
-
 /* Media Queries */
 
 @media (max-width: 1170px) {
@@ -835,6 +834,10 @@ body {
   .countdown {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
+  }
+  .bigCollection .orange_btn-2,
+  .bestSellers .orange_btn-2 {
+    width: 100%;
   }
   .subscription {
     padding: 1rem;
@@ -923,6 +926,43 @@ body {
     letter-spacing: 0.1rem;
     margin-right: 2rem;
   }
+  .bigCollection__title {
+    margin-top: 6.8rem;
+    margin-left: 0rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .seeMore_btn {
+    text-align: center;
+    position: relative;
+    top: 0rem;
+    right: 0rem;
+    margin-bottom: 1.5rem;
+  }
+  .bigCollection .orange_btn-2,
+  .bestSellers .orange_btn-2 {
+    width: 100%;
+  }
+  .upperFooter {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .upperFooter .socialLinks,
+  .upperFooter .categories {
+    border-bottom: none;
+  }
+
+  .upperFooter .communication,
+  .upperFooter .policy {
+    border-top: none;
+  }
+  .footer {
+    padding: 1.6rem 0.9rem;
+    padding-bottom: 5rem;
+  }
+  .footer img {
+    width: 15%;
+    height: 70%;
+  }
   /* darkLinks */
   .dark-links {
     display: none;
@@ -936,18 +976,6 @@ body {
     top: 0;
     transform: translateX(-300px);
     transition: transform 0.5s ease-in-out;
-    /*
-    display: block;
-    z-index: 999;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px;
-    transform: translateX(-250px);
-    transition: transform 250ms ease-in-out;
-    background: linear-gradient(180deg, #fc466b 0%, #3f5efb 100%);
-  */
   }
   .sidebarMenuInner {
     list-style: none;
@@ -958,11 +986,6 @@ body {
     align-items: flex-start;
     flex-wrap: wrap;
     height: 100%;
-    /*
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    */
   }
   .close-btn {
     display: flex;
@@ -989,15 +1012,6 @@ body {
   }
   .sidebarMenuInner li {
     padding-left: 1.5rem;
-    /*
-    list-style: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 20px;
-    cursor: pointer;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    */
   }
 
   .sidebarMenuInner li a {
@@ -1013,13 +1027,6 @@ body {
     font-size: 14px;
     line-height: 30px;
     text-transform: uppercase;
-    /*
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    */
   }
   .sidebarMenuInner li:not(:last-child) {
     border-bottom: 1px solid rgba(204, 204, 204, 0.5);
@@ -1106,5 +1113,119 @@ body {
 @media (max-height: 600px) {
   #sidebarMenu {
     display: none;
+  }
+}
+@media (max-width: 765px) {
+  .header .heartIcon {
+    display: none;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 13px 0;
+    padding-right: 0%;
+  }
+  .header .logo {
+    width: 10rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+  }
+  .loginDiv {
+    display: flex;
+    align-items: center;
+  }
+  .loginDiv i {
+    margin-right: 1.4rem;
+    font-size: 1.25rem;
+  }
+  #sidebarMenu {
+    display: block;
+  }
+  .slider {
+    width: 100%;
+    height: 100%;
+  }
+  .slider img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+  }
+  .circles {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 0;
+    padding: 5.5rem 1rem;
+    grid-gap: 2.5rem;
+  }
+  .circle img {
+    max-width: 85%;
+    padding: 1rem;
+    height: auto;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  .collections {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .mobileCollection {
+    display: none;
+    /* ilk child elementi dışında kalanlar */
+  }
+  .collections h3 {
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+  }
+  .discount {
+    grid-template-columns: 1fr;
+  }
+  .discount .content {
+    padding: 5.5% 13%;
+  }
+  .countdown {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  .countdown .countdownTimer {
+    margin-left: 0.3rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .countdown .countdownTimer h2 {
+    line-height: 29px;
+    font-size: 20px;
+    letter-spacing: 0.1rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+  }
+  .countdown .countdownCard {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 560px) {
+  #sidebarMenu {
+    display: block;
+  }
+  .slider img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+  }
+
+  .upper-header {
+    display: none;
+  }
+  .circles {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 0;
+    padding: 6rem 0rem;
+    grid-gap: 0rem;
+  }
+  .circle img {
+    max-width: 70%;
+    padding: 1rem;
+    height: auto;
+    background-color: #fff;
+    border-radius: 50%;
   }
 }
