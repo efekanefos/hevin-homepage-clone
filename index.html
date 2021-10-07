@@ -68,10 +68,23 @@
         <div class="loginDiv">
           <h5><i class="far fa-arrow-alt-circle-right"></i> Giriş Yap</h5>
           <i class="heartIcon far fa-heart"></i>
-          <i class="fas fa-shopping-bag"></i>
+          <i class="bagIcon fas fa-shopping-bag"></i>
         </div>
       </header>
       <!-- Header Finish -->
+      <!-- Mobile Header Start -->
+      <!--  
+      <header class="mobileHeader">
+        <div>
+          <label for="openSidebarMenu" class="sidebarIconToggle">
+            <i class="menu-icon fas fa-bars"></i>
+          </label>
+        </div>
+        <img class="logo" src="./img/Hevin_Logo.svg" alt="logo" />
+        <i class="bagIcon fas fa-shopping-bag"></i>
+      </header>
+      -->
+      <!-- Mobile Header Finish -->
 
       <!-- DarkLinks Start -->
       <header class="dark-links">
@@ -130,13 +143,13 @@
 
       <!-- Mobile-Bottom-Menu Finish -->
       <!-- Slider Start -->
-      <section class="slider">
+      <div class="slider">
         <img src="./img/contentImage.jpg" alt="slider" />
-      </section>
+      </div>
       <!-- Slider Finish -->
 
       <!-- Circles Start -->
-      <section class="circles">
+      <div class="circles">
         <div class="card">
           <div class="circle">
             <img src="./img/oturma-odasi-300x300.jpg" alt="1" />
@@ -161,7 +174,7 @@
           </div>
           <h3>Yemek Odası</h3>
         </div>
-      </section>
+      </div>
       <!-- Circles Finish -->
 
       <!-- Collections Start -->
@@ -212,7 +225,8 @@
         <div class="countdownTimer">
           <h2>FIRSAT VİTRİNİ</h2>
           <a class="countdownTimer_btn" href="#"
-            >Kalan Süre : 00g : 00s : 00d : 00s
+            ><span class="remainingTime">Kalan Süre :</span> 00g : 00s : 00d :
+            00s
           </a>
         </div>
         <div class="countdownCard">
@@ -556,6 +570,7 @@
         <i class="fab fa-instagram"></i>
         <h2>@hevinmobilya</h2>
         <p>İnstagramdan bizi takip etmeyi unutmayın</p>
+        <div class="borderCenter"></div>
       </section>
       <!-- Instagram Finish -->
 
@@ -564,26 +579,50 @@
         <div class="slideContent">
           <img src="./img/slider1.jpg" alt="1" />
           <i class="fav-icon fas fa-clone"></i>
+          <p class="hoverText">
+            Eron Yatak Odası Takımı; sadelik ve altın rengin muhteşem uyumuyla
+            yatak...
+          </p>
         </div>
         <div class="slideContent">
           <img src="./img/slider2.jpg" alt="2" />
           <i class="fav-icon fas fa-clone"></i>
+          <p class="hoverText">
+            Olivia Yemek Odası Takımı; zengin duruşu ve konforuyla evinizde
+            büyüleyici bir etki yaratıyor.
+          </p>
         </div>
         <div class="slideContent">
           <img src="./img/slider3.jpg" alt="3" />
           <i class="fav-icon fas fa-clone"></i>
+          <p class="hoverText">
+            Sadeliği şıklıkla buluşturan Olivia Koltuk Takımı, modern
+            tasarımıyla yeni bi...
+          </p>
         </div>
         <div class="slideContent">
           <img src="./img/slider4.jpg" alt="4" />
           <i class="fav-icon fas fa-clone"></i>
+          <p class="hoverText">
+            Olivia Yatak Odası Takımı; aytaşı renginin dingin zarafeti ve rose
+            rengin muh...
+          </p>
         </div>
         <div class="slideContent">
           <img src="./img/slider5.jpg" alt="5" />
           <i class="fav-icon fas fa-clone"></i>
+          <p class="hoverText">
+            Janet Yemek Odası Takımı; ahşap, vizon beji ve gold metal
+            harmonisinin en şık...
+          </p>
         </div>
         <div class="slideContent">
           <img src="./img/slider6.jpg" alt="6" />
           <i class="fav-icon fas fa-clone"></i>
+          <p class="hoverText">
+            Duru bir güzellik, göz alıcı detaylar Janet Koltuk Takımında! 👉🏻
+            hevin.com...
+          </p>
         </div>
       </section>
       <!-- FooterSlider Finish -->
@@ -601,7 +640,7 @@
           </div>
         </div>
         <div class="security">
-          <i class="fas fa-lock"></i>
+          <i class="lockIcon fab fa-expeditedssl"></i>
           <div class="securityContent">
             <h3>GÜVENLİ ÖDEME</h3>
             <p>
@@ -629,6 +668,7 @@
         <div class="categories">
           <ul>
             <li><h4>KATEGORİLER</h4></li>
+            <div class="borderLeft"></div>
             <li><a href="#">Oturma Odası</a></li>
             <li><a href="#">Yatak Odası</a></li>
             <li><a href="#">Yemek Odası</a></li>
@@ -639,6 +679,7 @@
         <div class="communication">
           <ul>
             <li><h4>BİZİ TANIYIN</h4></li>
+            <div class="borderLeft"></div>
             <li><a href="#">Kurumsal</a></li>
             <li><a href="#">İletişim</a></li>
             <li><a href="#">Satış Noktaları</a></li>
@@ -648,6 +689,7 @@
         <div class="policy">
           <ul>
             <li><h4>HİZMET & POLİTİKALAR</h4></li>
+            <div class="borderLeft"></div>
             <li><a href="#">Sipariş Takip</a></li>
             <li><a href="#">Mesafeli Satış Sözleşmesi</a></li>
             <li><a href="#">Teslimat & İade</a></li>
