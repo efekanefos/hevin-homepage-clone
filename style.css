@@ -124,6 +124,7 @@ body {
 @media (min-width: 1440px) {
   .upper-header {
     justify-content: space-around;
+    padding: 0 15%;
   }
 }
 @media (max-width: 990px) {
@@ -137,6 +138,7 @@ body {
 .header {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 13px 0;
 }
 .header .menu-icon {
@@ -172,6 +174,7 @@ body {
 }
 .loginDiv {
   display: flex;
+  position: relative;
   align-items: center;
 }
 .loginDiv h5 {
@@ -191,16 +194,36 @@ body {
 }
 .loginDiv i {
   margin-right: 1.4rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 .loginDiv h5:hover,
 .loginDiv i:hover {
   color: #80766a;
   cursor: pointer;
 }
+.badge {
+  position: absolute;
+  background-color: #695d4f;
+  color: #fff;
+  font-size: 0.6rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 5rem;
+}
+.badge-heart {
+  top: -0.4rem;
+  right: 3.1rem;
+}
+.badge-bag {
+  top: -0.4rem;
+  right: 0.6rem;
+}
+
 @media (min-width: 1440px) {
   .header {
-    margin: 0 13rem;
+    margin: 0 15%;
+  }
+  .searchBar {
+    width: 50rem;
   }
 }
 @media (max-width: 990px) {
@@ -208,6 +231,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #fff;
   }
   .header .searchBar,
   .header .btn,
@@ -227,9 +255,11 @@ body {
   }
 }
 @media (max-width: 600px) {
-  .header .heartIcon {
+  .header .heartIcon,
+  .badge-heart {
     display: none;
   }
+
   .header {
     padding: 1.7rem 0rem;
   }
@@ -244,7 +274,12 @@ body {
   font-size: 14px;
   line-height: 24px;
   font-family: "Cerebri-Sans-Medium";
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
+
 .dark-links-mobile {
   display: none;
 }
@@ -332,13 +367,21 @@ transform: scale(1.3) translateY(11.5%);
   cursor: pointer;
 }
 
+@media (min-width: 1440px) {
+  .circles {
+    grid-gap: 5%;
+    padding: 10% 20%;
+    justify-content: center;
+  }
+}
+/*
 @media (max-width: 1770px) {
   .circles {
     padding: 8rem 4rem;
     grid-gap: 4.5rem;
   }
 }
-
+*/
 @media (max-width: 990px) {
   .circles {
     grid-template-columns: repeat(2, 1fr);
@@ -393,7 +436,8 @@ transform: scale(1.3) translateY(11.5%);
 }
 @media (min-width: 1440px) {
   .collections {
-    margin: 0 10rem;
+    margin: 0 18%;
+    margin-bottom: 4rem;
   }
 }
 @media (max-width: 1170px) {
@@ -489,7 +533,7 @@ transform: scale(1.3) translateY(11.5%);
 }
 @media (min-width: 1440px) {
   .discount {
-    margin: 0 10rem;
+    margin: 0 18%;
   }
 }
 @media (max-width: 1170px) {
@@ -597,6 +641,13 @@ transform: scale(1.3) translateY(11.5%);
   width: 95%;
   padding-top: 5rem;
 }
+
+.countdownImg1:hover {
+  content: url("./img/countdown1_2.jpg");
+}
+.countdownImg2:hover {
+  content: url("./img/countdown2_2.jpg");
+}
 .countdown .countdownCard,
 .bigCollection .countdownCard,
 .bestSellers .row1 .countdownCard {
@@ -694,7 +745,7 @@ transform: scale(1.3) translateY(11.5%);
 }
 @media (min-width: 1440px) {
   .countdown {
-    margin: 2rem 10rem;
+    margin: 2rem 18%;
   }
 }
 @media (max-width: 1170px) {
@@ -728,15 +779,28 @@ transform: scale(1.3) translateY(11.5%);
 @media (max-width: 600px) {
   .countdown {
     grid-template-columns: 1fr;
-    grid-gap: 1rem;
+    grid-gap: 0rem;
+  }
+  .countdown img {
+    width: 100%;
+    padding-top: 1rem;
+  }
+  .countdown .orange_btn-2 {
+    width: 100%;
+  }
+  .countdown .countdownCard .fav-icon {
+    top: 1.7rem;
+    right: 0.8rem;
   }
   .countdown .countdownTimer {
     margin-left: 0rem;
     display: flex;
+    width: 100%;
+    position: unset;
+    margin-top: -3.5rem;
     flex-direction: column;
     padding: 1rem;
-    top: -3.2rem;
-    left: 22%;
+    justify-content: center !important;
   }
   .countdown .countdownTimer h2 {
     line-height: 29px;
@@ -746,9 +810,9 @@ transform: scale(1.3) translateY(11.5%);
     margin-bottom: 1rem;
   }
   .countdown .countdownCard {
-    width: 110%;
+    width: 100%;
     margin-top: 3rem;
-    margin-left: -0.5rem;
+    margin-left: 0rem;
   }
   .remainingTime {
     display: none;
@@ -779,14 +843,22 @@ transform: scale(1.3) translateY(11.5%);
   .bigCollection,
   .bigCollection__title,
   .seeMore_btn {
-    margin: 0 10rem;
+    margin: 0 18%;
+  }
+  .bigCollection {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 1440px) {
+  .bigCollection .countdownCard:last-child {
+    display: none;
   }
 }
 @media (max-width: 1170px) {
   .bigCollection {
     grid-template-columns: repeat(2, 1fr);
   }
-  .bigCollection .countdownCard:last-child {
+  .bigCollection .countdownCard:nth-last-child(2) {
     display: none;
   }
 
@@ -821,7 +893,7 @@ transform: scale(1.3) translateY(11.5%);
   .countdownCard {
     margin-left: 0.2rem;
   }
-  .bigCollection .countdownCard:nth-last-child(2) {
+  .bigCollection .countdownCard:nth-last-child(3) {
     display: none;
   }
   .seeMore_btn {
@@ -925,16 +997,19 @@ transform: scale(1.3) translateY(11.5%);
 }
 @media (min-width: 1440px) {
   .subscription {
-    padding: 2rem 16rem;
+    padding: 2rem 0rem;
   }
   .subscription .subscription__input {
-    width: 35%;
+    width: 25rem;
   }
   .subscription .rightContent {
     padding-right: 0rem;
   }
   .subscription p {
     width: 25%;
+  }
+  .subscription .subscription__btn {
+    width: 8rem;
   }
 }
 @media (max-width: 1170px) {
@@ -1072,6 +1147,17 @@ transform: scale(1.3) translateY(11.5%);
   font-size: 20px;
   margin-top: 6.8rem;
   margin-left: 0.6rem;
+}
+@media (min-width: 1440px) {
+  .bestSellers,
+  .bestSellers__title,
+  .seeMore_btn {
+    margin: 0 18%;
+  }
+  .bestSellers__title {
+    margin-top: 6.8rem;
+    margin-left: calc(18% + 0.6rem);
+  }
 }
 @media (max-width: 1170px) {
   .row1,
@@ -1254,6 +1340,11 @@ transform: scale(1.3) translateY(11.5%);
   line-height: 24px;
   color: #a3a3a3;
 }
+@media (min-width: 1440px) {
+  .payment {
+    padding: 0 18%;
+  }
+}
 @media (max-width: 600px) {
   .payment .creditCard,
   .payment .security {
@@ -1371,6 +1462,14 @@ transform: scale(1.3) translateY(11.5%);
   width: 9.4rem;
   margin-bottom: 1.5rem;
 }
+@media (min-width: 1440px) {
+  .upperFooter {
+    padding: 0 18%;
+  }
+  .upperFooter .socialLinks {
+    border-left: none;
+  }
+}
 @media (max-width: 990px) {
   .upperFooter {
     grid-template-columns: repeat(2, 1fr);
@@ -1406,6 +1505,11 @@ transform: scale(1.3) translateY(11.5%);
   font-size: 14px;
   line-height: 24px;
   color: #a3a3a3;
+}
+@media (min-width: 1440px) {
+  .footer {
+    padding: 1.6rem 18%;
+  }
 }
 @media (max-width: 990px) {
   .footer {

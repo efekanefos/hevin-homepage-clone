@@ -51,7 +51,7 @@
       <!-- UpperHeader Finish -->
 
       <!-- Header Start -->
-      <header class="header">
+      <header class="header" id="header">
         <div>
           <label for="openSidebarMenu" class="sidebarIconToggle">
             <i class="menu-icon fas fa-bars"></i>
@@ -68,13 +68,15 @@
         <div class="loginDiv">
           <h5><i class="far fa-arrow-alt-circle-right"></i> Giriş Yap</h5>
           <i class="heartIcon far fa-heart"></i>
+          <span class="badge badge-heart">0</span>
           <i class="bagIcon fas fa-shopping-bag"></i>
+          <span class="badge badge-bag">0</span>
         </div>
       </header>
       <!-- Header Finish -->
 
       <!-- DarkLinks Start -->
-      <header class="dark-links">
+      <header class="dark-links" id="dark-links">
         <ul class="dark-menu">
           <li><a href="#">çok satanlar</a></li>
           <li><a href="#">koleksiyonlar</a></li>
@@ -217,7 +219,7 @@
           </a>
         </div>
         <div class="countdownCard">
-          <img src="./img/countdown1_1.jpg" alt="1" />
+          <img class="countdownImg1" src="./img/countdown1_1.jpg" alt="1" />
           <h3>İstanbul Köşe Takımı Gri</h3>
           <p>
             <span class="previousPrice">&#8378;19.975</span>
@@ -227,7 +229,8 @@
           <i class="fav-icon far fa-heart"></i>
         </div>
         <div class="countdownCard mobileCollection">
-          <img src="./img/countdown2_1.jpg" alt="1" />
+          <img class="countdownImg2" src="./img/countdown2_1.jpg" alt="1" />
+
           <h3>Elit Koltuk Takımı</h3>
           <p>
             <span class="previousPrice">&#8378;14.916</span>
@@ -256,6 +259,16 @@
         <div class="countdownCard">
           <img src="./img/atlantaYemek1.jpg" alt="1" />
           <h3>Atlanta Yemek Odası Takımı</h3>
+          <p>
+            <span class="previousPrice">&#8378;14.916</span>
+            <span class="discountedPrice">&#8378;8.950</span>
+          </p>
+          <a href="#" class="orange_btn-2">Sepete Ekle</a>
+          <i class="fav-icon far fa-heart"></i>
+        </div>
+        <div class="countdownCard">
+          <img src="./img/atlantaYatak1.jpg" alt="1" />
+          <h3>Atlanta Yatak Odası Takımı</h3>
           <p>
             <span class="previousPrice">&#8378;14.916</span>
             <span class="discountedPrice">&#8378;8.950</span>
@@ -310,6 +323,16 @@
           <a href="#" class="orange_btn-2">Sepete Ekle</a>
           <i class="fav-icon far fa-heart"></i>
         </div>
+        <div class="countdownCard">
+          <img src="./img/janetYemek1.jpg" alt="1" />
+          <h3>Janet Yemek Odası Takımı</h3>
+          <p>
+            <span class="previousPrice">&#8378;14.916</span>
+            <span class="discountedPrice">&#8378;8.950</span>
+          </p>
+          <a href="#" class="orange_btn-2">Sepete Ekle</a>
+          <i class="fav-icon far fa-heart"></i>
+        </div>
       </section>
       <!-- bigCollection (Janet) Finish -->
 
@@ -333,6 +356,16 @@
           <p>
             <span class="previousPrice">&#8378;24.887</span>
             <span class="discountedPrice">&#8378;14.982</span>
+          </p>
+          <a href="#" class="orange_btn-2">Sepete Ekle</a>
+          <i class="fav-icon far fa-heart"></i>
+        </div>
+        <div class="countdownCard">
+          <img src="./img/oliviaAytasiYatak1.jpg" alt="1" />
+          <h3>Olivia Aytaşı Yatak Odası Takımı</h3>
+          <p>
+            <span class="previousPrice">&#8378;28.354</span>
+            <span class="discountedPrice">&#8378;17.000</span>
           </p>
           <a href="#" class="orange_btn-2">Sepete Ekle</a>
           <i class="fav-icon far fa-heart"></i>
@@ -384,6 +417,16 @@
           <a href="#" class="orange_btn-2">Sepete Ekle</a>
           <i class="fav-icon far fa-heart"></i>
         </div>
+        <div class="countdownCard">
+          <img src="./img/oliviaNehirYatak1.jpg" alt="1" />
+          <h3>Olivia Nehir Kumu Yatak Odası Takımı</h3>
+          <p>
+            <span class="previousPrice">&#8378;30.602</span>
+            <span class="discountedPrice">&#8378;18.360</span>
+          </p>
+          <a href="#" class="orange_btn-2">Sepete Ekle</a>
+          <i class="fav-icon far fa-heart"></i>
+        </div>
       </section>
       <!-- bigCollection (olivia NEHİR KUMU) Finish -->
 
@@ -404,6 +447,16 @@
         <div class="countdownCard">
           <img src="./img/janetYatak1.jpg" alt="1" />
           <h3>Janet Yatak Odası Takımı</h3>
+          <p>
+            <span class="previousPrice">&#8378;14.916</span>
+            <span class="discountedPrice">&#8378;8.950</span>
+          </p>
+          <a href="#" class="orange_btn-2">Sepete Ekle</a>
+          <i class="fav-icon far fa-heart"></i>
+        </div>
+        <div class="countdownCard">
+          <img src="./img/janetYemek1.jpg" alt="1" />
+          <h3>Janet Yemek Odası Takımı</h3>
           <p>
             <span class="previousPrice">&#8378;14.916</span>
             <span class="discountedPrice">&#8378;8.950</span>
@@ -444,6 +497,16 @@
           <p>
             <span class="previousPrice">&#8378;26.067</span>
             <span class="discountedPrice">&#8378;15.640</span>
+          </p>
+          <a href="#" class="orange_btn-2">Sepete Ekle</a>
+          <i class="fav-icon far fa-heart"></i>
+        </div>
+        <div class="countdownCard">
+          <img src="./img/napoliTv1.jpg" alt="1" />
+          <h3>Napoli Tv Ünitesi</h3>
+          <p>
+            <span class="previousPrice">&#8378;6.000</span>
+            <span class="discountedPrice">&#8378;3.600</span>
           </p>
           <a href="#" class="orange_btn-2">Sepete Ekle</a>
           <i class="fav-icon far fa-heart"></i>
@@ -726,18 +789,6 @@
       </section>
       <!-- Footer Finish -->
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
-<!-- Mobile Header Start -->
-<!--  
-      <header class="mobileHeader">
-        <div>
-          <label for="openSidebarMenu" class="sidebarIconToggle">
-            <i class="menu-icon fas fa-bars"></i>
-          </label>
-        </div>
-        <img class="logo" src="./img/Hevin_Logo.svg" alt="logo" />
-        <i class="bagIcon fas fa-shopping-bag"></i>
-      </header>
-      -->
-<!-- Mobile Header Finish -->
