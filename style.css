@@ -50,19 +50,6 @@ body {
   .footer {
     width: 100%;
   }
-  .countdown,
-  .bigCollection {
-    width: 95%;
-  }
-  .bestSellers {
-    grid-template-columns: 1fr !important;
-  }
-  .payment {
-    grid-template-columns: 1fr !important;
-  }
-  .upperFooter {
-    grid-template-columns: 1fr !important;
-  }
 }
 .upper-header {
   display: flex;
@@ -110,7 +97,9 @@ body {
 .follow-menu li a i {
   font-size: 12px;
 }
-
+.follow-menu li:last-child a {
+  padding-right: 0 !important;
+}
 .follow-menu li:first-child i {
   font-size: 1.1rem;
   margin-right: 0.5rem;
@@ -195,6 +184,10 @@ body {
 .loginDiv i {
   margin-right: 1.4rem;
   font-size: 1.5rem;
+}
+.bagIcon {
+  margin-right: 1.4rem;
+  width: 1.5rem;
 }
 .loginDiv h5:hover,
 .loginDiv i:hover {
@@ -288,7 +281,7 @@ body {
   display: flex;
   list-style: none;
   padding: 20px 0;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -301,6 +294,9 @@ body {
   color: #fff;
   text-transform: uppercase;
   margin-right: 1.5rem;
+}
+.dark-links .dark-menu li a:last-child {
+  margin-right: 0;
 }
 
 .dark-links .dark-menu li a:hover {
@@ -777,6 +773,13 @@ transform: scale(1.3) translateY(11.5%);
   }
 }
 @media (max-width: 600px) {
+  .bestSellers {
+    grid-template-columns: 1fr !important;
+  }
+  .countdown,
+  .bigCollection {
+    width: 95%;
+  }
   .countdown {
     grid-template-columns: 1fr;
     grid-gap: 0rem;
@@ -981,10 +984,9 @@ transform: scale(1.3) translateY(11.5%);
 .subscription {
   margin-top: 10rem;
   display: flex;
+  align-items: center;
   background-color: #695d4f;
   padding: 2rem;
-  align-items: center;
-  justify-content: center;
   margin: 10rem 0 auto;
   flex-wrap: nowrap;
 }
@@ -1062,16 +1064,26 @@ transform: scale(1.3) translateY(11.5%);
 }
 @media (min-width: 1440px) {
   .subscription {
-    padding: 2rem 0rem;
+    padding: 2rem 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .subscription .subscription__input {
     width: 25rem;
+    min-width: 15rem;
   }
   .subscription .rightContent {
     padding-right: 0rem;
+    width: 22rem;
+  }
+  .subscription h4 {
+    width: 15rem;
   }
   .subscription p {
-    width: 25%;
+    width: 25rem;
+    padding-right: 0rem;
+    margin-right: 4.5rem;
   }
   .subscription .subscription__btn {
     width: 8rem;
@@ -1420,6 +1432,9 @@ transform: scale(1.3) translateY(11.5%);
   }
 }
 @media (max-width: 600px) {
+  .payment {
+    grid-template-columns: 1fr !important;
+  }
   .payment .creditCard,
   .payment .security {
     flex-direction: column;
@@ -1559,6 +1574,9 @@ transform: scale(1.3) translateY(11.5%);
   }
 }
 @media (max-width: 600px) {
+  .upperFooter {
+    grid-template-columns: 1fr !important;
+  }
 }
 /* Footer */
 
