@@ -97,9 +97,7 @@ body {
 .follow-menu li a i {
   font-size: 12px;
 }
-.follow-menu li:last-child a {
-  padding-right: 0 !important;
-}
+
 .follow-menu li:first-child i {
   font-size: 1.1rem;
   margin-right: 0.5rem;
@@ -113,7 +111,15 @@ body {
 @media (min-width: 1440px) {
   .upper-header {
     justify-content: space-around;
-    padding: 0 15%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .follow-menu li:last-child a {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+  }
+  .main-menu {
+    margin-right: 30rem !important;
   }
 }
 @media (max-width: 990px) {
@@ -212,9 +218,11 @@ body {
 }
 
 @media (min-width: 1440px) {
+  /*
   .header {
     margin: 0 15%;
   }
+  */
   .searchBar {
     width: 50rem;
   }
@@ -301,6 +309,15 @@ body {
 
 .dark-links .dark-menu li a:hover {
   color: #de510b;
+}
+@media (min-width: 1440px) {
+  .dark-links .dark-menu {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  .dark-links .dark-menu li a {
+    margin-right: 2.5rem !important;
+  }
 }
 /* Slider */
 
