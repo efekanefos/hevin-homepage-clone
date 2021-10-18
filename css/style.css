@@ -1,19 +1,20 @@
 @font-face {
   font-family: "Cerebri-Sans-Regular";
-  src: url("./Cerebri.Sans.Pro/CerebriSansPro-Regular.otf") format("opentype");
+  src: url("../Cerebri.Sans.Pro/CerebriSansPro-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Cerebri-Sans-Medium";
-  src: url("./Cerebri.Sans.Pro/CerebriSansPro-Medium.otf") format("opentype");
+  src: url("../Cerebri.Sans.Pro/CerebriSansPro-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: "Cerebri-Sans-Bold";
-  src: url("./Cerebri.Sans.Pro/CerebriSansPro-Bold.otf") format("opentype");
+  src: url("../Cerebri.Sans.Pro/CerebriSansPro-Bold.otf") format("opentype");
 }
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @font-face {
   font-family: "Cerebri-Sans-ExtraBold";
-  src: url("./Cerebri.Sans.Pro/CerebriSansPro-ExtraBold.otf") format("opentype");
+  src: url("../Cerebri.Sans.Pro/CerebriSansPro-ExtraBold.otf")
+    format("opentype");
 }
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
@@ -219,11 +220,6 @@ body {
 }
 
 @media (min-width: 1440px) {
-  /*
-  .header {
-    margin: 0 15%;
-  }
-  */
   .searchBar {
     width: 50rem;
   }
@@ -326,7 +322,7 @@ body {
   }
 }
 /* Slider */
-
+/*
 .slider {
   max-width: 100%;
   height: 100%;
@@ -335,6 +331,45 @@ body {
 .slider img {
   width: 100%;
   height: 100%;
+}
+*/
+.slider {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.slider .left-slide,
+.slider .right-slide {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #000;
+  font-size: 20px;
+  top: 50%;
+  cursor: pointer;
+  margin-top: -20px;
+  text-align: center;
+  line-height: 50px;
+}
+.slider .left-slide {
+  left: 30px;
+}
+.slider .right-slide {
+  right: 30px;
+}
+.slider .slider-items .item img {
+  max-width: 100%;
+  display: block;
+}
+.slider .slider-items .item {
+  display: none;
+  position: relative;
+}
+.slider .slider-items .item.active {
+  display: block;
 }
 /* Circles */
 .circleSection {
@@ -660,10 +695,10 @@ body {
 }
 
 .countdownImg1:hover {
-  content: url("./img/countdown1_2.jpg");
+  content: url("../img/countdown1_2.jpg");
 }
 .countdownImg2:hover {
-  content: url("./img/countdown2_2.jpg");
+  content: url("../img/countdown2_2.jpg");
 }
 .countdown .countdownCard,
 .bigCollection .countdownCard,
@@ -867,68 +902,68 @@ body {
 }
 /* */
 .atlantaImg1:hover {
-  content: url("./img/atlantaKoltuk2.jpg");
+  content: url("../img/atlantaKoltuk2.jpg");
 }
 .atlantaImg2:hover {
-  content: url("./img/atlantaYemek2.jpg");
+  content: url("../img/atlantaYemek2.jpg");
 }
 .atlantaImg3:hover {
-  content: url("./img/atlantaYatak2.jpg");
+  content: url("../img/atlantaYatak2.jpg");
 }
 .atlantaImg4:hover {
-  content: url("./img/atlantaYatak2.jpg");
+  content: url("../img/atlantaYatak2.jpg");
 }
 /* */
 .janetImg1:hover {
-  content: url("./img/janetKoltuk2.jpg");
+  content: url("../img/janetKoltuk2.jpg");
 }
 .janetImg2:hover {
-  content: url("./img/janetYatak2.jpg");
+  content: url("../img/janetYatak2.jpg");
 }
 .janetImg3:hover {
-  content: url("./img/janetYemek2.jpg");
+  content: url("../img/janetYemek2.jpg");
 }
 .janetImg4:hover {
-  content: url("./img/janetYemek2.jpg");
+  content: url("../img/janetYemek2.jpg");
 }
 /* */
 .oliviaAytasiImg1:hover {
-  content: url("./img/oliviaAytasiKoltuk2.jpg");
+  content: url("../img/oliviaAytasiKoltuk2.jpg");
 }
 .oliviaAytasiImg2:hover {
-  content: url("./img/oliviaAytasiYemek2.jpg");
+  content: url("../img/oliviaAytasiYemek2.jpg");
 }
 .oliviaAytasiImg3:hover {
-  content: url("./img/oliviaAytasiYatak2.jpg");
+  content: url("../img/oliviaAytasiYatak2.jpg");
 }
 .oliviaAytasiImg4:hover {
-  content: url("./img/oliviaAytasiYatak2.jpg");
+  content: url("../img/oliviaAytasiYatak2.jpg");
 }
 /* */
 .oliviaNehirImg1:hover {
-  content: url("./img/oliviaNehirKoltuk2.jpg");
+  content: url("../img/oliviaNehirKoltuk2.jpg");
 }
 .oliviaNehirImg2:hover {
-  content: url("./img/oliviaNehirYemek2.jpg");
+  content: url("../img/oliviaNehirYemek2.jpg");
 }
 .oliviaNehirImg3:hover {
-  content: url("./img/oliviaNehirYatak2.jpg");
+  content: url("../img/oliviaNehirYatak2.jpg");
 }
 .oliviaNehirImg4:hover {
-  content: url("./img/oliviaNehirYatak2.jpg");
+  content: url("../img/oliviaNehirYatak2.jpg");
 }
 /* */
 .napoliImg1:hover {
-  content: url("./img/napoliYemek2.jpg");
+  content: url("../img/napoliYemek2.jpg");
 }
 .napoliImg2:hover {
-  content: url("./img/napoliYatak2.jpg");
+  content: url("../img/napoliYatak2.jpg");
 }
 .napoliImg3:hover {
-  content: url("./img/napoliTv2.jpg");
+  content: url("../img/napoliTv2.jpg");
 }
 .napoliImg4:hover {
-  content: url("./img/napoliTv2.jpg");
+  content: url("../img/napoliTv2.jpg");
 }
 @media (min-width: 1440px) {
   .bigCollection {
@@ -1317,13 +1352,13 @@ body {
   margin-left: 0.6rem;
 }
 .bestNapoliImg1:hover {
-  content: url("./img/napoliYemek2.jpg");
+  content: url("../img/napoliYemek2.jpg");
 }
 .bestNapoliImg2:hover {
-  content: url("./img/napoliYatak2.jpg");
+  content: url("../img/napoliYatak2.jpg");
 }
 .bestNapoliImg3:hover {
-  content: url("./img/napoliTv2.jpg");
+  content: url("../img/napoliTv2.jpg");
 }
 @media (min-width: 1440px) {
   .bestSellersSection {
