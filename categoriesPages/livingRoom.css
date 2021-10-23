@@ -251,6 +251,10 @@ body {
     display: inline-block;
     margin-left: 2rem;
   }
+  .header .heartIcon,
+  .badge-heart {
+    display: none;
+  }
 }
 @media (max-width: 600px) {
   .header .heartIcon,
@@ -358,7 +362,12 @@ body {
   font-size: 16px;
   line-height: 26px;
 }
-
+@media (max-width: 990px) {
+  .banner__title {
+    font-size: 25px;
+    padding-bottom: 0rem;
+  }
+}
 /* Banner Finish */
 
 /* Main Content Start */
@@ -411,17 +420,17 @@ body {
     margin-right: auto;
   }
 }
-/*
 @media (max-width: 990px) {
   .mainContent__filter {
     display: none;
   }
   .mainContent__products {
     grid-column: 1 / -1;
-    background-color: red;
+    padding: 1rem;
+    padding-top: 3rem;
   }
 }
-*/
+
 /* Main Content Finish */
 
 /* Pricing Start */
@@ -633,6 +642,16 @@ body {
 .bigCollection .countdownCard .fav-icon {
   top: 0.5rem;
   right: 0.5rem;
+}
+@media (max-width: 990px) {
+  .bigCollection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .bigCollection {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* BIG COL ENDS */
@@ -1076,13 +1095,21 @@ body {
   }
   .bottomMenu li {
     margin: 0 auto;
+    cursor: pointer;
   }
   .bottomMenu li i {
     font-size: 20px;
   }
 
-  .bottomMenu li i:hover {
+  .bottomMenu li i:hover,
+  #bottomMenu__filterBtn:hover {
     color: #444;
+  }
+  #bottomMenu__filterBtn {
+    font-family: "Cerebri-Sans-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
   }
 
   /* Bottom Menu Finish */
