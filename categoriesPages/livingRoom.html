@@ -172,14 +172,25 @@
             <section class="pricing">
               <div class="pricing__content">
                 <h3 class="pricing__title">FİYAT</h3>
+                <span class="multi-range">
+                  <input
+                    type="range"
+                    min="1145"
+                    max="16840"
+                    value="1145"
+                    id="lower"
+                  />
+                  <span id="spanId">1145</span>
 
-                <input
-                  type="range"
-                  name="pricing__range"
-                  id="pricing__range"
-                  min="1145"
-                  max="16840"
-                />
+                  <input
+                    type="range"
+                    min="1145"
+                    max="16840"
+                    value="16840"
+                    id="upper"
+                  />
+                  <span id="spanId2">16840</span>
+                </span>
               </div>
             </section>
             <section class="ordering">
@@ -244,9 +255,72 @@
                       <span class="spanText">Koleksiyonlar</span>
                     </span>
                     <p class="categories__listItem">
-                      <span class="categories__plusBtn">+</span>
+                      <span id="collectionPlusBtn" class="categories__plusBtn"
+                        ><i id="plusBtn" class="fas fa-plus"></i
+                      ></span>
                     </p>
                   </li>
+                  <ul
+                    id="collectionSubList"
+                    class="categories__listItem-sublist"
+                  >
+                    <li class="categories__listItem-sublistItem">
+                      <input
+                        type="radio"
+                        name="radio__ordering"
+                        id="radio__ordering"
+                      />
+                      Atlanta Koleksiyon
+                    </li>
+                    <li class="categories__listItem-sublistItem">
+                      <input
+                        type="radio"
+                        name="radio__ordering"
+                        id="radio__ordering"
+                      />
+                      Eron Koleksiyon
+                    </li>
+                    <li class="categories__listItem-sublistItem">
+                      <input
+                        type="radio"
+                        name="radio__ordering"
+                        id="radio__ordering"
+                      />
+                      Janet Koleksiyon
+                    </li>
+                    <li class="categories__listItem-sublistItem">
+                      <input
+                        type="radio"
+                        name="radio__ordering"
+                        id="radio__ordering"
+                      />
+                      Lake Koleksiyon
+                    </li>
+                    <li class="categories__listItem-sublistItem">
+                      <input
+                        type="radio"
+                        name="radio__ordering"
+                        id="radio__ordering"
+                      />
+                      Napoli Koleksiyon
+                    </li>
+                    <li class="categories__listItem-sublistItem">
+                      <input
+                        type="radio"
+                        name="radio__ordering"
+                        id="radio__ordering"
+                      />
+                      Olivia Aytaşı Koleksiyon
+                    </li>
+                    <li class="categories__listItem-sublistItem">
+                      <input
+                        type="radio"
+                        name="radio__ordering"
+                        id="radio__ordering"
+                      />
+                      Olivia Nehir Kumu Koleksiyon
+                    </li>
+                  </ul>
                   <li class="categories__listItem">
                     <input
                       type="radio"
@@ -265,9 +339,32 @@
                       <span class="spanText">Oturma Odası</span>
                     </span>
                     <p class="categories__listItem">
-                      <span class="categories__plusBtn">+</span>
+                      <span id="livingRoomPlusBtn" class="categories__plusBtn"
+                        ><i id="plusBtn" class="fas fa-plus"></i
+                      ></span>
                     </p>
                   </li>
+                  <ul
+                    id="livingRoomSubList"
+                    class="categories__listItem-sublist"
+                  >
+                    <li class="categories__listItem-sublistItem">
+                      <input
+                        type="radio"
+                        name="radio__ordering"
+                        id="radio__ordering"
+                      />
+                      Koltuk Takımı
+                    </li>
+                    <li class="categories__listItem-sublistItem">
+                      <input
+                        type="radio"
+                        name="radio__ordering"
+                        id="radio__ordering"
+                      />
+                      Köşe Takımı
+                    </li>
+                  </ul>
                   <li class="categories__listItem">
                     <input
                       type="radio"
@@ -294,9 +391,21 @@
                       <span class="spanText">Yatak Odası</span>
                     </span>
                     <p class="categories__listItem">
-                      <span class="categories__plusBtn">+</span>
+                      <span id="bedRoomPlusBtn" class="categories__plusBtn"
+                        ><i id="plusBtn" class="fas fa-plus"></i
+                      ></span>
                     </p>
                   </li>
+                  <ul id="bedRoomSubList" class="categories__listItem-sublist">
+                    <li class="categories__listItem-sublistItem">
+                      <input
+                        type="radio"
+                        name="radio__ordering"
+                        id="radio__ordering"
+                      />
+                      Yatak Odası Takımı
+                    </li>
+                  </ul>
                   <li class="categories__listItem-plus">
                     <span>
                       <input
@@ -307,9 +416,21 @@
                       <span class="spanText">Yemek Odası</span>
                     </span>
                     <p class="categories__listItem">
-                      <span class="categories__plusBtn">+</span>
+                      <span id="kitchenPlusBtn" class="categories__plusBtn"
+                        ><i id="plusBtn" class="fas fa-plus"></i
+                      ></span>
                     </p>
                   </li>
+                  <ul id="kitchenSubList" class="categories__listItem-sublist">
+                    <li class="categories__listItem-sublistItem">
+                      <input
+                        type="radio"
+                        name="radio__ordering"
+                        id="radio__ordering"
+                      />
+                      Yemek Odası Takımı
+                    </li>
+                  </ul>
                 </ul>
               </div>
             </section>
@@ -328,12 +449,77 @@
               </div>
               <div class="selection__boxes">
                 <div class="orderBox">
-                  <ul class="orderBox__list">
-                    <li class="orderBox__listItem">GÖSTER</li>
-                    <li class="orderBox__listItem">15</li>
-                    <li class="orderBox__listItem">30</li>
-                    <li class="orderBox__listItem">45</li>
-                  </ul>
+                  <div id="column__2" class="box1">
+                    <div class="row1">
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                    </div>
+                    <div class="row1">
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                    </div>
+                    <div class="row1">
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                    </div>
+                  </div>
+                  <div id="column__3" class="box1">
+                    <div class="row1">
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                    </div>
+                    <div class="row1">
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                    </div>
+                    <div class="row1">
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                    </div>
+                  </div>
+                  <div id="column__4" class="box1">
+                    <div class="row1">
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                    </div>
+                    <div class="row1">
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                    </div>
+                    <div class="row1">
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full"></i>
+                    </div>
+                  </div>
+                  <div class="rectangle1">
+                    <div class="row1">
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full getTogether"></i>
+                      <i class="fas fa-square-full getTogether"></i>
+                      <i class="fas fa-square-full getTogether-2"></i>
+                    </div>
+                    <div class="row1">
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full getTogether"></i>
+                      <i class="fas fa-square-full getTogether"></i>
+                      <i class="fas fa-square-full getTogether-2"></i>
+                    </div>
+                    <div class="row1">
+                      <i class="fas fa-square-full"></i>
+                      <i class="fas fa-square-full getTogether"></i>
+                      <i class="fas fa-square-full getTogether"></i>
+                      <i class="fas fa-square-full getTogether-2"></i>
+                    </div>
+                  </div>
                 </div>
 
                 <!--  
