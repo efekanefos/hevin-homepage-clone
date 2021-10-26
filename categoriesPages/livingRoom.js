@@ -1,43 +1,69 @@
-var lowerSlider = document.querySelector("#lower"),
-  upperSlider = document.querySelector("#upper"),
-  lowerVal = parseInt(lowerSlider.value);
-upperVal = parseInt(upperSlider.value);
-function showLower() {
-  console.log(lowerSlider.value);
-  document.querySelector("#spanId").textContent = lowerSlider.value;
+(function () {
+  var parent = document.querySelector(".range-slider");
+  if (!parent) return;
+
+  var rangeS = parent.querySelectorAll("input[type=range]"),
+    numberS = parent.querySelectorAll("input[type=number]");
+
+  rangeS.forEach(function (el) {
+    el.oninput = function () {
+      var slide1 = parseFloat(rangeS[0].value),
+        slide2 = parseFloat(rangeS[1].value);
+
+      if (slide1 > slide2) {
+        [slide1, slide2] = [slide2, slide1];
+        // var tmp = slide2;
+        // slide2 = slide1;
+        // slide1 = tmp;
+      }
+
+      numberS[0].value = slide1;
+      numberS[1].value = slide2;
+    };
+  });
+
+  numberS.forEach(function (el) {
+    el.oninput = function () {
+      var number1 = parseFloat(numberS[0].value),
+        number2 = parseFloat(numberS[1].value);
+
+      if (number1 > number2) {
+        var tmp = number1;
+        numberS[0].value = number2;
+        numberS[1].value = tmp;
+      }
+
+      rangeS[0].value = number1;
+      rangeS[1].value = number2;
+    };
+  });
+})();
+/* bullet */
+var rangeSlider = document.getElementById("rs-range-line");
+var rangeBullet = document.getElementById("leftPrice");
+
+rangeSlider.addEventListener("input", showSliderValue, false);
+rangeBullet.innerHTML = " &#8378;" + rangeSlider.value;
+
+function showSliderValue() {
+  rangeBullet.innerHTML = " &#8378;" + rangeSlider.value;
+  var bulletPosition = rangeSlider.value / rangeSlider.max - 0.08;
+
+  rangeBullet.style.left = bulletPosition * 308 + "px";
 }
-function showUpper() {
-  console.log(upperSlider.value);
-  document.querySelector("#spanId2").textContent = upperSlider.value;
+/* */
+var rangeSlider2 = document.getElementById("rs-range-line2");
+var rangeBullet2 = document.getElementById("rightPrice");
+
+rangeSlider2.addEventListener("input", showSliderValue2, false);
+rangeBullet2.innerHTML = " &#8378;" + rangeSlider2.value;
+function showSliderValue2() {
+  rangeBullet2.innerHTML = " &#8378;" + rangeSlider2.value;
+  var bulletPosition2 = rangeSlider2.value / rangeSlider2.max - 0.08;
+  console.log(bulletPosition2);
+
+  rangeBullet2.style.left = bulletPosition2 * 308 + "px";
 }
-lowerSlider.addEventListener("input", showLower);
-upperSlider.addEventListener("input", showUpper);
-
-upperSlider.oninput = function () {
-  lowerVal = parseInt(lowerSlider.value);
-  upperVal = parseInt(upperSlider.value);
-
-  if (upperVal < lowerVal + 4) {
-    lowerSlider.value = upperVal - 4;
-
-    if (lowerVal == lowerSlider.min) {
-      upperSlider.value = 4;
-    }
-  }
-};
-
-lowerSlider.oninput = function () {
-  lowerVal = parseInt(lowerSlider.value);
-  upperVal = parseInt(upperSlider.value);
-
-  if (lowerVal > upperVal - 4) {
-    upperSlider.value = lowerVal + 4;
-
-    if (upperVal == upperSlider.max) {
-      lowerSlider.value = parseInt(upperSlider.max) - 4;
-    }
-  }
-};
 
 /* Plus Btn */
 

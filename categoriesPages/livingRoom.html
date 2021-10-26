@@ -172,27 +172,44 @@
             <section class="pricing">
               <div class="pricing__content">
                 <h3 class="pricing__title">FİYAT</h3>
-                <span class="multi-range">
-                  <input
-                    type="range"
-                    min="1145"
-                    max="16840"
-                    value="1145"
-                    id="lower"
-                  />
-                  <span id="spanId">1145</span>
+                <div class="range-slider">
+                  <span id="leftPrice">
+                    <input type="number" value="1145" min="1145" max="16840" />
+                  </span>
+
+                  <span id="rightPrice">
+                    <input type="number" value="16840" min="1145" max="16840" />
+                  </span>
 
                   <input
+                    id="rs-range-line"
                     type="range"
+                    value="0"
                     min="1145"
                     max="16840"
-                    value="16840"
-                    id="upper"
                   />
-                  <span id="spanId2">16840</span>
-                </span>
+                  <input
+                    id="rs-range-line2"
+                    type="range"
+                    value="16840"
+                    min="1145"
+                    max="16840"
+                  />
+                  <svg id="line" width="100%" height="24">
+                    <line
+                      x1="0"
+                      y1="0"
+                      x2="300"
+                      y2="0"
+                      stroke="#ccc"
+                      stroke-width="8"
+                      stroke-dasharray="1 58"
+                    ></line>
+                  </svg>
+                </div>
               </div>
             </section>
+
             <section class="ordering">
               <div class="ordering__content">
                 <h3 class="ordering__title">SIRALA</h3>
