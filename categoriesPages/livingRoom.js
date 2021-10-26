@@ -89,7 +89,7 @@ let rectangle1 = document.querySelector("#rectangle__1");
 
 let bigCollection = document.querySelector(".bigCollection");
 
-let bigCollectionImg = document.querySelector("#bigCollectionImg");
+let bigCollectionRectangle = document.querySelector(".bigCollection-rectangle");
 
 collectionPlus.addEventListener("click", function () {
   collectionSubList.classList.toggle("showSubList");
@@ -118,11 +118,21 @@ kitchenPlus.addEventListener("click", function () {
 
 column2.addEventListener("click", function () {
   bigCollection.style.gridTemplateColumns = "repeat(2, 1fr)";
+  bigCollection.style.display = "grid";
+  bigCollectionRectangle.style.display = "none";
 });
 column3.addEventListener("click", function () {
   bigCollection.style.gridTemplateColumns = "repeat(3, 1fr)";
+  bigCollection.style.display = "grid";
+  bigCollectionRectangle.style.display = "none";
 });
 column4.addEventListener("click", function () {
   bigCollection.style.gridTemplateColumns = "repeat(4, 1fr)";
+  bigCollection.style.display = "grid";
+  bigCollectionRectangle.style.display = "none";
 });
-rectangle1.addEventListener("click", function () {});
+bigCollectionRectangle.style.display = "none";
+rectangle1.addEventListener("click", function () {
+  bigCollection.style.display = "none";
+  bigCollectionRectangle.style.display = "grid";
+});

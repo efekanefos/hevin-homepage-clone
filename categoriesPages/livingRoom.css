@@ -815,7 +815,8 @@ input[type="range"]::-ms-thumb {
 }
 
 /* BIG COL START */
-.bigCollection {
+.bigCollection,
+.bigCollection-rectangle {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 1rem;
@@ -824,45 +825,90 @@ input[type="range"]::-ms-thumb {
   padding-top: 3rem;
   grid-gap: 2rem;
 }
-.bigCollection img {
+.bigCollection-rectangle {
+  grid-template-columns: 1fr;
+}
+.bigCollection img,
+.bigCollection-rectangle img {
   max-width: 100%;
   height: auto;
   background-color: #fff;
 }
-.bigCollection .countdownCard {
+.bigCollection-rectangle img {
+  max-width: 31.5%;
+  margin-right: 2rem;
+}
+.bigCollection .countdownCard,
+.bigCollection-rectangle .countdownCard-rectangle {
   justify-content: center;
   align-items: center;
   position: relative;
 }
+.bigCollection-rectangle .countdownCard-rectangle {
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+.countdownCard-rectangle .bigCollection-rightColumn {
+  display: flex;
+  flex-direction: column;
+}
 
-.bigCollection .countdownCard h3 {
+.bigCollection .countdownCard h3,
+.bigCollection-rectangle .countdownCard-rectangle h3 {
   font-family: "Cerebri-Sans-Regular";
   font-weight: 400;
   font-style: normal;
-  line-height: 19px;
   font-size: 16px;
+  line-height: 19px;
   padding-top: 0.8rem;
 }
+
+.bigCollection-rectangle .countdownCard-rectangle h3 {
+  font-family: "Cerebri-Sans-Medium";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  padding-top: 0rem;
+  padding-bottom: 0.5rem;
+}
+
 .bigCollection .countdownCard .previousPrice,
-.bigCollection .countdownCard .discountedPrice {
+.bigCollection .countdownCard .discountedPrice,
+.bigCollection-rectangle .countdownCard-rectangle .previousPrice,
+.bigCollection-rectangle .countdownCard-rectangle .discountedPrice {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
-.bigCollection .countdownCard .previousPrice {
+
+.bigCollection .countdownCard .previousPrice,
+.bigCollection-rectangle .countdownCard-rectangle .previousPrice {
   font-size: 13px;
   line-height: 13px;
   color: #a3a3a3;
   text-decoration: line-through;
 }
 
-.bigCollection .countdownCard .discountedPrice {
+.bigCollection-rectangle .countdownCard-rectangle .previousPrice {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.bigCollection .countdownCard .discountedPrice,
+.bigCollection-rectangle .countdownCard-rectangle .discountedPrice {
   color: #e0510b;
   font-size: 17px;
   line-height: 17px;
 }
 
-.bigCollection .orange_btn-2 {
+.bigCollection-rectangle .countdownCard-rectangle .discountedPrice {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.bigCollection .orange_btn-2,
+.bigCollection-rectangle .orange_btn-2 {
   text-decoration: none;
   color: #fff;
   border: 1px solid transparent;
@@ -881,15 +927,36 @@ input[type="range"]::-ms-thumb {
   margin-top: 10px;
   margin-bottom: 40px;
 }
+
+.bigCollection-rectangle .countdownCard-rectangle .orange_btn-2 {
+  height: 42px;
+  width: 9.5rem !important;
+  background: #695d4f;
+  line-height: 42px;
+  margin: 0;
+  padding: 0px 30px;
+  -webkit-box-shadow: 1px 2px 12px 0px rgb(144 144 144 / 75%);
+  box-shadow: 1px 2px 12px 0px rgb(144 144 144 / 75%);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+}
+
 .bigCollection .orange_btn-2 {
   width: 100%;
 }
 
-.bigCollection .orange_btn-2:hover {
+.bigCollection .orange_btn-2:hover,
+.bigCollection-rectangle .orange_btn-2:hover {
   background-color: #2f2828;
 }
+.bigCollection-rectangle .orange_btn-2:hover {
+  background-color: #544b4b;
+}
 
-.bigCollection .countdownCard .fav-icon {
+.bigCollection .countdownCard .fav-icon,
+.bigCollection-rectangle .fav-icon {
   position: absolute;
   top: 5.6rem;
   right: 1.6rem;
@@ -897,11 +964,35 @@ input[type="range"]::-ms-thumb {
   padding: 0.8rem;
   border-radius: 50%;
 }
+.bottomParag {
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  padding-top: 4.5rem;
+  color: #444444;
+}
 
-.bigCollection .countdownCard .fav-icon:hover {
+.bigCollection-rectangle .fav-icon {
+  position: unset;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 0;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  -webkit-box-shadow: 1px 2px 12px 0px rgb(144 144 144 / 75%);
+  box-shadow: 1px 2px 12px 0px rgb(144 144 144 / 75%);
+}
+.basketColumn {
+  display: flex;
+}
+.bigCollection .countdownCard .fav-icon:hover,
+.bigCollection-rectangle .fav-icon:hover {
   color: #92897f;
 }
-.bigCollection .countdownCard .fav-icon {
+.bigCollection .countdownCard .fav-icon,
+.bigCollection-rectangle .fav-icon {
   top: 0.5rem;
   right: 0.5rem;
 }
