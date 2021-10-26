@@ -432,6 +432,10 @@ input {
   left: 0;
   bottom: 0;
 }
+.range-slider svg {
+  padding-left: 0.6rem;
+  color: rgb(136, 136, 136);
+}
 input[type="number"] {
   border: 1px solid #ddd;
   text-align: center;
@@ -458,17 +462,19 @@ svg {
   padding: 1px 5px;
   font-size: 10px;
   border-radius: 3px;
+  width: 2.5rem;
 }
 
 #rightPrice {
   position: absolute;
   transform-origin: center center;
   top: -1rem;
-  left: 17.5rem;
+  right: 0rem; /*88% !important; */
   background-color: #e0510b;
   color: #fff;
   padding: 1px 5px;
   font-size: 10px;
+  width: 2.5rem;
 }
 #leftPrice input,
 #rightPrice input {
@@ -476,7 +482,7 @@ svg {
   color: #fff;
   border: none;
   font-size: 10px;
-  width: 1.7rem;
+  max-width: 1.7rem;
 }
 input[type="number"]:invalid,
 input[type="number"]:out-of-range {

@@ -85,7 +85,11 @@ let column3 = document.querySelector("#column__3");
 
 let column4 = document.querySelector("#column__4");
 
+let rectangle1 = document.querySelector("#rectangle__1");
+
 let bigCollection = document.querySelector(".bigCollection");
+
+let bigCollectionImg = document.querySelector("#bigCollectionImg");
 
 collectionPlus.addEventListener("click", function () {
   collectionSubList.classList.toggle("showSubList");
@@ -121,3 +125,4 @@ column3.addEventListener("click", function () {
 column4.addEventListener("click", function () {
   bigCollection.style.gridTemplateColumns = "repeat(4, 1fr)";
 });
+rectangle1.addEventListener("click", function () {});
