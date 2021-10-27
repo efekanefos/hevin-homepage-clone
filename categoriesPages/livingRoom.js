@@ -41,27 +41,40 @@
 /* bullet */
 var rangeSlider = document.getElementById("rs-range-line");
 var rangeBullet = document.getElementById("leftPrice");
+var leftPrice_gray = document.getElementById("leftPrice-gray");
 
 rangeSlider.addEventListener("input", showSliderValue, false);
 rangeBullet.innerHTML = " &#8378;" + rangeSlider.value;
+leftPrice_gray.innerHTML = " &#8378;" + rangeSlider.value;
 
 function showSliderValue() {
   rangeBullet.innerHTML = " &#8378;" + rangeSlider.value;
   var bulletPosition = rangeSlider.value / rangeSlider.max - 0.08;
-
+  console.log(rangeSlider.value);
+  if (rangeSlider.value <= 1290) {
+    leftPrice_gray.style.display = "none";
+  } else {
+    leftPrice_gray.style.display = "inline-block";
+  }
   rangeBullet.style.left = bulletPosition * 308 + "px";
 }
 /* */
 var rangeSlider2 = document.getElementById("rs-range-line2");
 var rangeBullet2 = document.getElementById("rightPrice");
+var rightPrice_gray = document.getElementById("rightPrice_gray");
 
 rangeSlider2.addEventListener("input", showSliderValue2, false);
 rangeBullet2.innerHTML = " &#8378;" + rangeSlider2.value;
+rightPrice_gray.innerHTML = " &#8378;" + rangeSlider2.value;
+
 function showSliderValue2() {
   rangeBullet2.innerHTML = " &#8378;" + rangeSlider2.value;
   var bulletPosition2 = rangeSlider2.value / rangeSlider2.max - 0.08;
-  console.log(bulletPosition2);
-
+  if (rangeSlider2.value >= 16840) {
+    rightPrice_gray.style.display = "none";
+  } else {
+    rightPrice_gray.style.display = "inline-block";
+  }
   rangeBullet2.style.left = bulletPosition2 * 308 + "px";
 }
 
