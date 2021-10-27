@@ -866,10 +866,43 @@ input[type="range"]::-ms-thumb {
   height: auto;
   background-color: #fff;
 }
-.bigCollection-rectangle img {
-  max-width: 31.5%;
+
+.ImgSpan {
+  position: relative;
+  width: 50%;
+  max-height: 100%;
   margin-right: 2rem;
 }
+.bigCollection-rectangle img {
+  max-width: 100%;
+}
+.ImgOverlay {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #695d4f;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s;
+}
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  padding: 0.8rem;
+  font-size: 1.3rem;
+  background: #fff;
+  transition: transform 0.5s !important;
+}
+
+.searchIcon:hover {
+  background: #695d4f;
+  color: #fff;
+}
+
 .bigCollection .countdownCard,
 .bigCollection-rectangle .countdownCard-rectangle {
   justify-content: center;
@@ -881,6 +914,15 @@ input[type="range"]::-ms-thumb {
   justify-content: flex-start !important;
   align-items: flex-start !important;
 }
+
+.countdownCard-rectangle:hover > .ImgSpan .ImgOverlay {
+  opacity: 0.5 !important;
+}
+
+.countdownCard-rectangle:hover > .ImgSpan .searchIcon {
+  transform: translate(-50%, -50%) scale(1);
+}
+
 .countdownCard-rectangle .bigCollection-rightColumn {
   display: flex;
   flex-direction: column;
@@ -973,6 +1015,7 @@ input[type="range"]::-ms-thumb {
   font-size: 13px;
   letter-spacing: 1px;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .bigCollection .orange_btn-2 {
@@ -1003,6 +1046,8 @@ input[type="range"]::-ms-thumb {
   line-height: 22px;
   padding-top: 4.5rem;
   color: #444444;
+  padding-top: 35px;
+  border-top: 1px solid #e5e5e5;
 }
 
 .bigCollection-rectangle .fav-icon {
@@ -1028,6 +1073,7 @@ input[type="range"]::-ms-thumb {
   top: 0.5rem;
   right: 0.5rem;
 }
+
 @media (max-width: 990px) {
   .bigCollection {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -1036,6 +1082,15 @@ input[type="range"]::-ms-thumb {
 @media (max-width: 600px) {
   .bigCollection {
     grid-template-columns: 1fr !important;
+  }
+  .bigCollection-rectangle .countdownCard-rectangle {
+    flex-direction: column;
+  }
+  .bigCollection-rectangle img {
+    max-width: 100%;
+  }
+  .bigCollection-rectangle .countdownCard-rectangle h3 {
+    padding-top: 2rem;
   }
 }
 
