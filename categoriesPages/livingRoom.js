@@ -149,3 +149,386 @@ rectangle1.addEventListener("click", function () {
   bigCollection.style.display = "none";
   bigCollectionRectangle.style.display = "grid";
 });
+
+/* Column Colors */
+
+column3.style.color = "#695D4F";
+
+column2.addEventListener("click", function () {
+  column2.style.color = "#695D4F";
+  column3.style.color = "black";
+  column4.style.color = "black";
+  rectangle1.style.color = "black";
+});
+column3.addEventListener("click", function () {
+  column2.style.color = "black";
+  column3.style.color = "#695D4F";
+  column4.style.color = "black";
+  rectangle1.style.color = "black";
+});
+column4.addEventListener("click", function () {
+  column2.style.color = "black";
+  column3.style.color = "black";
+  column4.style.color = "#695D4F";
+  rectangle1.style.color = "black";
+});
+rectangle1.addEventListener("click", function () {
+  column2.style.color = "black";
+  column3.style.color = "black";
+  column4.style.color = "black";
+  rectangle1.style.color = "#695D4F";
+});
+
+/* map */
+
+var show_15 = document.querySelector("#show_15");
+var show_30 = document.querySelector("#show_30");
+var show_45 = document.querySelector("#show_45");
+let booleanVar = false;
+
+/* PAGE - 15 START */
+
+show_15.addEventListener("click", function () {
+  bigCollection.innerHTML = newArr
+    .slice(0, 15)
+    .map(function (item) {
+      return `<div class="countdownCard">
+  <img
+    class="oliviaNehirImg1"
+    src=${item.image}
+    alt="1"
+  />
+  <h3>${item.name}</h3>
+  <p>
+    <span class="previousPrice">&#8378;18.333</span>
+    <span class="discountedPrice">&#8378;11.600</span>
+  </p>
+  <a href="#" class="orange_btn-2">Sepete Ekle</a>
+  <i class="fav-icon far fa-heart"></i>
+</div>`;
+    })
+    .join("");
+
+  bigCollectionRectangle.innerHTML = newArr
+    .slice(0, 15)
+    .map(function (item) {
+      return `<div class="countdownCard-rectangle">
+        <span class="ImgSpan">
+          <img
+            class="oliviaNehirImg1 countdownCard-rectangleImg"
+            src=${item.image}
+            alt="1"
+          />
+          <div class="ImgOverlay"></div>
+          <i class="fas fa-search searchIcon"></i>
+        </span>
+        <span class="bigCollection-rightColumn">
+          <h3>${item.name}</h3>
+          <p>
+            <span class="previousPrice">&#8378;14.916</span>
+            <span class="discountedPrice">&#8378;8.950</span>
+          </p>
+          <span class="basketColumn">
+            <a href="#" class="orange_btn-2">Sepete Ekle</a>
+            <i class="fav-icon far fa-heart"></i>
+          </span>
+          <p class="bottomParag">
+            Özel formlu kol tasarımdaki eşsiz kapitone detayları ile
+            şık ve konforlu bir oturum alanı oluşturur. Sırt
+            yapısında kullanılan zengin kırlentler yaşam alanlarında
+            sıra dışı bir…
+          </p>
+        </span>
+      </div>`;
+    })
+    .join("");
+  pagination_2.classList.remove("pagination__activeItem");
+  pagination_1.classList.add("pagination__activeItem");
+  pagination_3.classList.remove("pagination__activeItem");
+  pagination_4.classList.remove("pagination__activeItem");
+
+  pagination_3.style.display = "block";
+  pagination_1.style.display = "block";
+  pagination_2.style.display = "block";
+  pagination_4.style.display = "block";
+
+  booleanVar = false;
+  console.log(booleanVar);
+  return booleanVar;
+});
+
+/* PAGE - 15  END */
+
+/* PAGE - 30  START */
+
+show_30.addEventListener("click", function () {
+  bigCollection.innerHTML = newArr
+    .slice(0, 30)
+    .map(function (item) {
+      return `<div class="countdownCard">
+  <img
+    class="oliviaNehirImg1"
+    src=${item.image}
+    alt="1"
+  />
+  <h3>${item.name}</h3>
+  <p>
+    <span class="previousPrice">&#8378;18.333</span>
+    <span class="discountedPrice">&#8378;11.600</span>
+  </p>
+  <a href="#" class="orange_btn-2">Sepete Ekle</a>
+  <i class="fav-icon far fa-heart"></i>
+</div>`;
+    })
+    .join("");
+
+  bigCollectionRectangle.innerHTML = newArr
+    .slice(0, 30)
+    .map(function (item) {
+      return `<div class="countdownCard-rectangle">
+        <span class="ImgSpan">
+          <img
+            class="oliviaNehirImg1 countdownCard-rectangleImg"
+            src=${item.image}
+            alt="1"
+          />
+          <div class="ImgOverlay"></div>
+          <i class="fas fa-search searchIcon"></i>
+        </span>
+        <span class="bigCollection-rightColumn">
+          <h3>${item.name}</h3>
+          <p>
+            <span class="previousPrice">&#8378;14.916</span>
+            <span class="discountedPrice">&#8378;8.950</span>
+          </p>
+          <span class="basketColumn">
+            <a href="#" class="orange_btn-2">Sepete Ekle</a>
+            <i class="fav-icon far fa-heart"></i>
+          </span>
+          <p class="bottomParag">
+            Özel formlu kol tasarımdaki eşsiz kapitone detayları ile
+            şık ve konforlu bir oturum alanı oluşturur. Sırt
+            yapısında kullanılan zengin kırlentler yaşam alanlarında
+            sıra dışı bir…
+          </p>
+        </span>
+      </div>`;
+    })
+    .join("");
+  pagination_2.classList.remove("pagination__activeItem");
+  pagination_1.classList.add("pagination__activeItem");
+  pagination_3.classList.remove("pagination__activeItem");
+  pagination_4.classList.remove("pagination__activeItem");
+
+  pagination_3.style.display = "none";
+  pagination_1.style.display = "block";
+  pagination_2.style.display = "block";
+  pagination_4.style.display = "block";
+
+  booleanVar = true;
+  console.log(booleanVar);
+  return booleanVar;
+});
+
+/* PAGE - 30  END */
+
+/* PAGE - 45  START */
+
+show_45.addEventListener("click", function () {
+  bigCollection.innerHTML = newArr
+    .slice(0, 45)
+    .map(function (item) {
+      return `<div class="countdownCard">
+  <img
+    class="oliviaNehirImg1"
+    src=${item.image}
+    alt="1"
+  />
+  <h3>${item.name}</h3>
+  <p>
+    <span class="previousPrice">&#8378;18.333</span>
+    <span class="discountedPrice">&#8378;11.600</span>
+  </p>
+  <a href="#" class="orange_btn-2">Sepete Ekle</a>
+  <i class="fav-icon far fa-heart"></i>
+</div>`;
+    })
+    .join("");
+
+  bigCollectionRectangle.innerHTML = newArr
+    .slice(0, 45)
+    .map(function (item) {
+      return `<div class="countdownCard-rectangle">
+        <span class="ImgSpan">
+          <img
+            class="oliviaNehirImg1 countdownCard-rectangleImg"
+            src=${item.image}
+            alt="1"
+          />
+          <div class="ImgOverlay"></div>
+          <i class="fas fa-search searchIcon"></i>
+        </span>
+        <span class="bigCollection-rightColumn">
+          <h3>${item.name}</h3>
+          <p>
+            <span class="previousPrice">&#8378;14.916</span>
+            <span class="discountedPrice">&#8378;8.950</span>
+          </p>
+          <span class="basketColumn">
+            <a href="#" class="orange_btn-2">Sepete Ekle</a>
+            <i class="fav-icon far fa-heart"></i>
+          </span>
+          <p class="bottomParag">
+            Özel formlu kol tasarımdaki eşsiz kapitone detayları ile
+            şık ve konforlu bir oturum alanı oluşturur. Sırt
+            yapısında kullanılan zengin kırlentler yaşam alanlarında
+            sıra dışı bir…
+          </p>
+        </span>
+      </div>`;
+    })
+    .join("");
+
+  pagination_2.classList.remove("pagination__activeItem");
+  pagination_1.classList.add("pagination__activeItem");
+  pagination_3.classList.remove("pagination__activeItem");
+  pagination_4.classList.remove("pagination__activeItem");
+
+  pagination_1.style.display = "none";
+  pagination_2.style.display = "none";
+  pagination_3.style.display = "none";
+  pagination_4.style.display = "none";
+
+  booleanVar = false;
+  console.log(booleanVar);
+  return booleanVar;
+});
+
+/* PAGE - 45 END */
+
+bigCollection.innerHTML = newArr
+  .slice(0, 15)
+  .map(function (item) {
+    return `<div class="countdownCard">
+  <img
+    class="oliviaNehirImg1"
+    src=${item.image}
+    alt="1"
+  />
+  <h3>${item.name}</h3>
+  <p>
+    <span class="previousPrice">&#8378;18.333</span>
+    <span class="discountedPrice">&#8378;11.600</span>
+  </p>
+  <a href="#" class="orange_btn-2">Sepete Ekle</a>
+  <i class="fav-icon far fa-heart"></i>
+</div>`;
+  })
+  .join("");
+
+bigCollectionRectangle.innerHTML = newArr
+  .slice(0, 15)
+  .map(function (item) {
+    return `<div class="countdownCard-rectangle">
+    <span class="ImgSpan">
+      <img
+        class="oliviaNehirImg1 countdownCard-rectangleImg"
+        src=${item.image}
+        alt="1"
+      />
+      <div class="ImgOverlay"></div>
+      <i class="fas fa-search searchIcon"></i>
+    </span>
+    <span class="bigCollection-rightColumn">
+      <h3>${item.name}</h3>
+      <p>
+        <span class="previousPrice">&#8378;14.916</span>
+        <span class="discountedPrice">&#8378;8.950</span>
+      </p>
+      <span class="basketColumn">
+        <a href="#" class="orange_btn-2">Sepete Ekle</a>
+        <i class="fav-icon far fa-heart"></i>
+      </span>
+      <p class="bottomParag">
+        Özel formlu kol tasarımdaki eşsiz kapitone detayları ile
+        şık ve konforlu bir oturum alanı oluşturur. Sırt
+        yapısında kullanılan zengin kırlentler yaşam alanlarında
+        sıra dışı bir…
+      </p>
+    </span>
+  </div>`;
+  })
+  .join("");
+
+/* Pagination */
+
+var pagination_1 = document.querySelector("#pagination_1");
+
+var pagination_2 = document.querySelector("#pagination_2");
+
+var pagination_3 = document.querySelector("#pagination_3");
+
+var pagination_4 = document.querySelector("#pagination_4"); /* > */
+
+pagination_2.addEventListener("click", function () {
+  let page2Arr;
+  if (booleanVar === true) {
+    page2Arr = newArr.slice(30, 45);
+  } else {
+    page2Arr = newArr.slice(15, 30);
+  }
+  console.log(page2Arr);
+
+  bigCollection.innerHTML = page2Arr
+    .map(function (item) {
+      return `<div class="countdownCard">
+  <img
+    class="oliviaNehirImg1"
+    src=${item.image}
+    alt="1"
+  />
+  <h3>${item.name}</h3>
+  <p>
+    <span class="previousPrice">&#8378;18.333</span>
+    <span class="discountedPrice">&#8378;11.600</span>
+  </p>
+  <a href="#" class="orange_btn-2">Sepete Ekle</a>
+  <i class="fav-icon far fa-heart"></i>
+</div>`;
+    })
+    .join("");
+
+  pagination_2.classList.add("pagination__activeItem");
+  pagination_1.classList.remove("pagination__activeItem");
+  pagination_3.classList.remove("pagination__activeItem");
+  pagination_4.classList.remove("pagination__activeItem");
+});
+
+pagination_3.addEventListener("click", function () {
+  let page2Arr = newArr.slice(30, 45);
+  console.log(page2Arr);
+
+  bigCollection.innerHTML = page2Arr
+    .map(function (item) {
+      return `<div class="countdownCard">
+  <img
+    class="oliviaNehirImg1"
+    src=${item.image}
+    alt="1"
+  />
+  <h3>${item.name}</h3>
+  <p>
+    <span class="previousPrice">&#8378;18.333</span>
+    <span class="discountedPrice">&#8378;11.600</span>
+  </p>
+  <a href="#" class="orange_btn-2">Sepete Ekle</a>
+  <i class="fav-icon far fa-heart"></i>
+</div>`;
+    })
+    .join("");
+
+  pagination_2.classList.remove("pagination__activeItem");
+  pagination_1.classList.remove("pagination__activeItem");
+  pagination_3.classList.add("pagination__activeItem");
+  pagination_4.classList.remove("pagination__activeItem");
+});
