@@ -61,7 +61,7 @@ const newArr = [
   },
   /* 15 */
   {
-    name: "16Hera Koltuk Takımı Lacivert",
+    name: "Hera Koltuk Takımı Lacivert",
     image: "./livingRoomImg/heraLacivert.jpg",
   },
   {
@@ -101,32 +101,32 @@ const newArr = [
     image: "./livingRoomImg/atlantaKrem.jpg",
   },
   {
-    name: "lake Koltuk Takımı Yeşil",
+    name: "Lake Koltuk Takımı Yeşil",
     image: "./livingRoomImg/lakeYeşil.jpg",
   },
   {
-    name: "janet Koltuk Takımı Lacivert",
+    name: "Janet Koltuk Takımı Lacivert",
     image: "./livingRoomImg/janetLacivert.jpg",
   },
   {
-    name: "olivia Koltuk Takımı Gri",
+    name: "Olivia Koltuk Takımı Gri",
     image: "./livingRoomImg/oliviaGri.jpg",
   },
   {
-    name: "atlanta Koltuk Takımı Gri",
+    name: "Atlanta Koltuk Takımı Gri",
     image: "./livingRoomImg/atlantaGri.jpg",
   },
   {
-    name: "istanbul Koltuk Takımı Lacivert",
+    name: "İstanbul Koltuk Takımı Lacivert",
     image: "./livingRoomImg/istanbulLacivert.jpg",
   },
   /* 30 */
   {
-    name: "31istanbul Köşe Takımı Gri",
+    name: "İstanbul Köşe Takımı Gri",
     image: "./livingRoomImg/istanbulGri.jpg",
   },
   {
-    name: "istanbul Köşe Takımı Kahve",
+    name: "İstanbul Köşe Takımı Kahve",
     image: "./livingRoomImg/istanbulKahve.jpg",
   },
   {
@@ -170,16 +170,16 @@ const newArr = [
     image: "./livingRoomImg/rooneyKrem.jpg",
   },
   {
-    name: "Rooney Koltuk Takımı Örme Kumaş",
-    image: "./livingRoomImg/rooneyÖrme.jpg",
+    name: "Olivia Köşe Takımı Kırık Beyaz",
+    image: "./livingRoomImg/oliviaKırıkBeyaz.jpg",
   },
   {
-    name: "Rooney Koltuk Takımı Gri",
-    image: "./livingRoomImg/rooneyGri.jpg",
+    name: "Salsa Köşe Takımı Gri",
+    image: "./livingRoomImg/salsaGri.jpg",
   },
   {
-    name: "Hera Koltuk Takımı Gül Kurusu",
-    image: "./livingRoomImg/heraGül.jpg",
+    name: "Salsa Köşe Takımı Bordo",
+    image: "./livingRoomImg/salsaBordo.jpg",
   },
   /* 45 */
 ];

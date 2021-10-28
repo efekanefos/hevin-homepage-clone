@@ -252,6 +252,10 @@ show_15.addEventListener("click", function () {
   pagination_2.style.display = "block";
   pagination_4.style.display = "block";
 
+  show_15.style.color = "#695d4f";
+  show_30.style.color = "#a3a3a3";
+  show_45.style.color = "#a3a3a3";
+
   booleanVar = false;
   console.log(booleanVar);
   return booleanVar;
@@ -324,6 +328,10 @@ show_30.addEventListener("click", function () {
   pagination_1.style.display = "block";
   pagination_2.style.display = "block";
   pagination_4.style.display = "block";
+
+  show_15.style.color = "#a3a3a3";
+  show_30.style.color = "#695d4f";
+  show_45.style.color = "#a3a3a3";
 
   booleanVar = true;
   console.log(booleanVar);
@@ -399,6 +407,10 @@ show_45.addEventListener("click", function () {
   pagination_3.style.display = "none";
   pagination_4.style.display = "none";
 
+  show_15.style.color = "#a3a3a3";
+  show_30.style.color = "#a3a3a3";
+  show_45.style.color = "#695d4f";
+
   booleanVar = false;
   console.log(booleanVar);
   return booleanVar;
@@ -470,6 +482,68 @@ var pagination_3 = document.querySelector("#pagination_3");
 
 var pagination_4 = document.querySelector("#pagination_4"); /* > */
 
+pagination_1.addEventListener("click", function () {
+  let page2Arr = newArr.slice(0, 15);
+  console.log(page2Arr);
+
+  bigCollection.innerHTML = page2Arr
+    .map(function (item) {
+      return `<div class="countdownCard">
+  <img
+    class="oliviaNehirImg1"
+    src=${item.image}
+    alt="1"
+  />
+  <h3>${item.name}</h3>
+  <p>
+    <span class="previousPrice">&#8378;18.333</span>
+    <span class="discountedPrice">&#8378;11.600</span>
+  </p>
+  <a href="#" class="orange_btn-2">Sepete Ekle</a>
+  <i class="fav-icon far fa-heart"></i>
+</div>`;
+    })
+    .join("");
+
+  bigCollectionRectangle.innerHTML = page2Arr
+    .map(function (item) {
+      return `<div class="countdownCard-rectangle">
+    <span class="ImgSpan">
+      <img
+        class="oliviaNehirImg1 countdownCard-rectangleImg"
+        src=${item.image}
+        alt="1"
+      />
+      <div class="ImgOverlay"></div>
+      <i class="fas fa-search searchIcon"></i>
+    </span>
+    <span class="bigCollection-rightColumn">
+      <h3>${item.name}</h3>
+      <p>
+        <span class="previousPrice">&#8378;14.916</span>
+        <span class="discountedPrice">&#8378;8.950</span>
+      </p>
+      <span class="basketColumn">
+        <a href="#" class="orange_btn-2">Sepete Ekle</a>
+        <i class="fav-icon far fa-heart"></i>
+      </span>
+      <p class="bottomParag">
+        Özel formlu kol tasarımdaki eşsiz kapitone detayları ile
+        şık ve konforlu bir oturum alanı oluşturur. Sırt
+        yapısında kullanılan zengin kırlentler yaşam alanlarında
+        sıra dışı bir…
+      </p>
+    </span>
+  </div>`;
+    })
+    .join("");
+
+  pagination_1.classList.add("pagination__activeItem");
+  pagination_2.classList.remove("pagination__activeItem");
+  pagination_3.classList.remove("pagination__activeItem");
+  pagination_4.classList.remove("pagination__activeItem");
+});
+
 pagination_2.addEventListener("click", function () {
   let page2Arr;
   if (booleanVar === true) {
@@ -495,6 +569,39 @@ pagination_2.addEventListener("click", function () {
   <a href="#" class="orange_btn-2">Sepete Ekle</a>
   <i class="fav-icon far fa-heart"></i>
 </div>`;
+    })
+    .join("");
+
+  bigCollectionRectangle.innerHTML = page2Arr
+    .map(function (item) {
+      return `<div class="countdownCard-rectangle">
+    <span class="ImgSpan">
+      <img
+        class="oliviaNehirImg1 countdownCard-rectangleImg"
+        src=${item.image}
+        alt="1"
+      />
+      <div class="ImgOverlay"></div>
+      <i class="fas fa-search searchIcon"></i>
+    </span>
+    <span class="bigCollection-rightColumn">
+      <h3>${item.name}</h3>
+      <p>
+        <span class="previousPrice">&#8378;14.916</span>
+        <span class="discountedPrice">&#8378;8.950</span>
+      </p>
+      <span class="basketColumn">
+        <a href="#" class="orange_btn-2">Sepete Ekle</a>
+        <i class="fav-icon far fa-heart"></i>
+      </span>
+      <p class="bottomParag">
+        Özel formlu kol tasarımdaki eşsiz kapitone detayları ile
+        şık ve konforlu bir oturum alanı oluşturur. Sırt
+        yapısında kullanılan zengin kırlentler yaşam alanlarında
+        sıra dışı bir…
+      </p>
+    </span>
+  </div>`;
     })
     .join("");
 
@@ -524,6 +631,39 @@ pagination_3.addEventListener("click", function () {
   <a href="#" class="orange_btn-2">Sepete Ekle</a>
   <i class="fav-icon far fa-heart"></i>
 </div>`;
+    })
+    .join("");
+
+  bigCollectionRectangle.innerHTML = page2Arr
+    .map(function (item) {
+      return `<div class="countdownCard-rectangle">
+    <span class="ImgSpan">
+      <img
+        class="oliviaNehirImg1 countdownCard-rectangleImg"
+        src=${item.image}
+        alt="1"
+      />
+      <div class="ImgOverlay"></div>
+      <i class="fas fa-search searchIcon"></i>
+    </span>
+    <span class="bigCollection-rightColumn">
+      <h3>${item.name}</h3>
+      <p>
+        <span class="previousPrice">&#8378;14.916</span>
+        <span class="discountedPrice">&#8378;8.950</span>
+      </p>
+      <span class="basketColumn">
+        <a href="#" class="orange_btn-2">Sepete Ekle</a>
+        <i class="fav-icon far fa-heart"></i>
+      </span>
+      <p class="bottomParag">
+        Özel formlu kol tasarımdaki eşsiz kapitone detayları ile
+        şık ve konforlu bir oturum alanı oluşturur. Sırt
+        yapısında kullanılan zengin kırlentler yaşam alanlarında
+        sıra dışı bir…
+      </p>
+    </span>
+  </div>`;
     })
     .join("");
 
