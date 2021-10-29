@@ -183,11 +183,16 @@
             </div>
 
             <!-- row1 -->
-            <div id="row1" class="mainContent__productTableRow">
+            <div id="row2" class="mainContent__productTableRow">
               <i class="fas fa-times removeIcon"></i>
-              <img src="./cartImages/olivia_koltuk_1_1-1000x750.jpg" alt="1" />
+
+              <img
+                id="firstImg"
+                src="./cartImages/olivia_koltuk_1_1-1000x750.jpg"
+                alt="1"
+              />
               <span class="productInfo">
-                <p class="productName">Olivia Üçlü Koltuk Yeşil</p>
+                <p class="productName">Olivia Yataklı Üçlü Koltuk Vizon</p>
                 <p class="productSubName">
                   <span class="productKind">Takım:</span> Olivia Üçlü Koltuk
                   Yeşil
@@ -210,10 +215,10 @@
                 </ul>
               </span>
               <span class="prices">
-                <span class="discountedPrice">7.333</span>
-                <span class="updatedPrice">4.400</span>
+                <span class="discountedPrice">₺7.333</span
+                ><span class="updatedPrice">₺4.400</span>
               </span>
-              <span class="totalPrice"> 4.400 </span>
+              <span class="totalPrice"> ₺26.400 </span>
             </div>
             <!-- row1 -->
 
@@ -244,10 +249,10 @@
                 </ul>
               </span>
               <span class="prices">
-                <span class="discountedPrice">7.333</span>
-                <span class="updatedPrice">4.400</span>
+                <span class="discountedPrice">₺2.200</span
+                ><span class="updatedPrice">₺1.920</span>
               </span>
-              <span class="totalPrice"> 4.400 </span>
+              <span class="totalPrice"> ₺5.760 </span>
             </div>
             <!-- row2 -->
 
@@ -278,15 +283,61 @@
                 </ul>
               </span>
               <span class="prices">
-                <span class="discountedPrice">7.333</span>
-                <span class="updatedPrice">4.400</span>
+                <span class="discountedPrice">₺8.800</span
+                ><span class="updatedPrice">₺5.280</span>
               </span>
-              <span class="totalPrice"> 4.400 </span>
+              <span class="totalPrice"> ₺5.280 </span>
             </div>
             <!-- row3 -->
+
+            <!-- row4 -->
+
+            <div class="mainContent__productTableRow lastRow">
+              <div class="coupon">
+                <label for="couponCode" class="couponLabel">
+                  Kupon:
+                  <input
+                    class="couponInput"
+                    placeholder="Kupon kodu"
+                    type="text"
+                    name="couponCode"
+                    id="couponCode"
+                  />
+                </label>
+                <span class="couponBtn"> KUPON UYGULA </span>
+              </div>
+            </div>
+
+            <!-- row4 -->
           </div>
 
-          <div class="mainContent__priceTable"></div>
+          <div class="mainContent__priceTable">
+            <div class="mainContent__priceTableHead">
+              <span class="mainContent__priceTableHead-title"
+                >SEPET TOPLAMLARI</span
+              >
+            </div>
+            <div class="mainContent_priceTableRow">
+              <span class="leftText"> Ürün Toplam </span>
+              <span class="rightText discountedrightText"> ₺59.398 </span>
+            </div>
+            <div class="mainContent_priceTableRow">
+              <span class="leftText"> İndirim </span>
+              <span class="rightText"> -₺21.958 </span>
+            </div>
+            <div class="mainContent_priceTableRow">
+              <span class="leftText"> Ara Toplam </span>
+              <span class="rightText"> ₺37.440 </span>
+            </div>
+            <div class="mainContent_priceTableRow">
+              <span class="leftText"> Sepette 10% İndirim </span>
+              <span class="rightText"> -₺3.744 </span>
+            </div>
+            <div id="totalRow" class="mainContent_priceTableRow">
+              <span class="leftText"> Toplam </span>
+              <span class="rightText"> ₺33.696 </span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -374,7 +425,7 @@
       <!-- Footer Start -->
       <section class="footerSection">
         <section class="footer">
-          <img src="../img/visa-mastercard-iyzico.png" alt="card" />
+          <img src="../../img/visa-mastercard-iyzico.png" alt="card" />
           <p>© 2021 – Hevin Mobilya. Tüm hakları saklıdır.</p>
         </section>
       </section>

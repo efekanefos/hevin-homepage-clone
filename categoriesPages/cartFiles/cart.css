@@ -60,7 +60,7 @@
 }
 
 .mainContent__priceTable {
-  padding-top: 2.5rem;
+  margin-top: 2.5rem;
   grid-column: 5 / -1;
   background-color: #ddd;
 }
@@ -99,7 +99,7 @@
 
 .mainContent__productTableRow {
   display: flex;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(230, 230, 230, 0.5);
   align-items: center;
   padding: 0.8rem;
 }
@@ -117,11 +117,17 @@
   text-align: center;
   margin-left: 1rem;
 }
+#firstImg {
+  margin-left: 2.5rem !important;
+}
 #row2 img,
 #row3 img {
   margin-left: 5rem;
 }
-
+#row1,
+#row2 {
+  border-bottom: none;
+}
 .removeIcon:hover {
   background-color: #695d4f;
   text-decoration: unset;
@@ -134,7 +140,7 @@
   font-size: 15px;
   line-height: 14px;
   color: #000;
-  width: 30%;
+  width: 17rem;
 }
 .productName:hover {
   color: #695d4f;
@@ -154,6 +160,7 @@
   padding-right: 2rem;
   margin-left: 1rem;
 }
+
 .productCounter-list {
   display: flex;
   list-style: none;
@@ -177,11 +184,75 @@
   margin-left: 2.8rem;
   margin-right: 3.2rem;
 }
+.discountedPrice {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 21px;
+  color: #a3a3a3;
+  text-decoration: line-through;
+  padding-right: 0.2rem;
+}
+.updatedPrice {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #444444;
+}
 
 .totalPrice {
   padding-right: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: #695d4f;
+  width: 9%;
 }
 
+.coupon {
+  display: flex;
+  padding: 0rem 1.5rem;
+  align-items: center;
+  justify-content: center !important;
+}
+.couponLabel {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #444444;
+}
+.couponInput {
+  border: 1px solid #ddd;
+  padding: 5px 6px;
+  margin: 0 5px;
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  width: 70%;
+}
+.couponBtn {
+  font-family: "Cerebri-Sans-Bold";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 39px;
+  color: #fff;
+  padding: 0rem 1.2rem;
+  text-align: center;
+  background-color: #695d4f;
+  box-shadow: none;
+}
+input:focus {
+  outline: none;
+}
+.couponBtn:hover {
+  background-color: #544b4b;
+  cursor: pointer;
+}
 @media (max-width: 1170px) {
   .mainContent__productTable {
     grid-column: 1 / -1;
@@ -193,3 +264,49 @@
 }
 
 /* Main Content Finish */
+.mainContent__priceTableHead {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.mainContent__priceTableHead-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000;
+}
+.mainContent_priceTableRow {
+  background-color: #fff;
+  padding: 1rem 1rem;
+  padding-right: 11rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.leftText,
+.rightText {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+}
+.discountedrightText {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 21px;
+  color: #a3a3a3;
+  text-decoration: line-through;
+  padding-right: 0.2rem;
+}
+#totalRow {
+  background-color: #e0510b;
+  color: #fff;
+}
+#totalRow .rightText {
+  font-size: 16px;
+  line-height: 26px;
+}
