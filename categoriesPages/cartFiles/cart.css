@@ -1,6 +1,5 @@
 @import url(../../css/init.css);
-
-/* Banner Start */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); /* Banner Start */
 
 .banner {
   background-image: url("../livingRoomImg/banner.jpg");
@@ -48,6 +47,7 @@
 .mainContent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-gap: 2.5rem;
   padding: 1rem;
   max-width: 1440px;
@@ -57,23 +57,27 @@
 .mainContent__productTable {
   margin-top: 2.5rem;
   grid-column: 1 / 5;
+  grid-row: 1 / -1;
 }
 
 .mainContent__priceTable {
   margin-top: 2.5rem;
   grid-column: 5 / -1;
+  grid-row: 1 / -1;
   background-color: #ddd;
 }
 
 .mainContent__productTableHead {
   background-color: #f5f5f5;
+  max-width: 100%;
 }
 
 .mainContent__productTableHead-list {
   display: flex;
   list-style: none;
-  justify-content: flex-end;
+  justify-content: space-around;
   padding: 1rem;
+  padding-left: 13rem;
 }
 
 .mainContent__productTableHead-listItem {
@@ -85,7 +89,7 @@
 }
 
 #title__product {
-  padding-right: 27%;
+  padding-right: 25%;
 }
 #title__count {
   padding-right: 18%;
@@ -102,6 +106,7 @@
   border: 1px solid rgba(230, 230, 230, 0.5);
   align-items: center;
   padding: 0.8rem;
+  justify-content: space-around;
 }
 
 .mainContent__productTableRow img {
@@ -140,7 +145,6 @@
   font-size: 15px;
   line-height: 14px;
   color: #000;
-  width: 17rem;
 }
 .productName:hover {
   color: #695d4f;
@@ -154,7 +158,7 @@
 .productKind {
   font-size: 14px;
   line-height: 22px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .productCounter {
   padding-right: 2rem;
@@ -186,7 +190,7 @@
 }
 .discountedPrice {
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 13px;
   line-height: 21px;
   color: #a3a3a3;
@@ -195,7 +199,7 @@
 }
 .updatedPrice {
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   line-height: 22px;
   color: #444444;
@@ -204,7 +208,7 @@
 .totalPrice {
   padding-right: 2rem;
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 26px;
   color: #695d4f;
@@ -259,7 +263,43 @@ input:focus {
   }
 
   .mainContent__priceTable {
-    display: none;
+    margin-top: -2rem;
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+  }
+  #title__product {
+    padding-right: 28.5%;
+  }
+  #title__count {
+    padding-right: 15%;
+  }
+  #title__price {
+    padding-right: 11%;
+  }
+  #title__total {
+    padding-right: 10%;
+  }
+}
+@media (max-width: 850px) {
+  .mainContent__productTable {
+    overflow-x: scroll;
+    max-height: 40%;
+  }
+  .mainContent__productTableRow img {
+    width: 5rem !important;
+  }
+  .mainContent__productTableRow,
+  .mainContent__productTableHead {
+    min-width: 50rem;
+  }
+  .prices {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .mainContent__productTableRow img {
+    width: 20%;
   }
 }
 
@@ -271,31 +311,36 @@ input:focus {
   padding: 1rem;
 }
 .mainContent__priceTableHead-title {
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-family: "Cerebri-Sans-Bold";
+  font-weight: 400;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 25px;
   color: #000;
 }
 .mainContent_priceTableRow {
   background-color: #fff;
   padding: 1rem 1rem;
-  padding-right: 11rem;
-
+  border: 1px solid rgba(230, 230, 230, 0.5);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .leftText,
 .rightText {
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   line-height: 22px;
 }
+.leftText {
+  width: 50%;
+}
+.rightText {
+  color: #444;
+}
 .discountedrightText {
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 13px;
   line-height: 21px;
   color: #a3a3a3;
@@ -309,4 +354,131 @@ input:focus {
 #totalRow .rightText {
   font-size: 16px;
   line-height: 26px;
+  color: #fff !important;
+}
+
+#shipping__row {
+  padding: 1rem 1rem;
+  padding-right: 4.5rem;
+  display: flex;
+}
+#shippingLeft {
+  align-self: flex-start !important;
+}
+#shipping__Info {
+  line-height: 2.2 !important;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #444444;
+}
+#shipping__Info .shipping__city {
+  font-weight: 500;
+  color: #000;
+}
+#shipping__Info .changeAddress {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 21px;
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.3rem;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+#shipping__Info .changeAddress:hover {
+  color: #695d4f;
+}
+.btnGroup {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-right: 6rem;
+}
+.leftBtn,
+.rightBtn {
+  font-family: "Cerebri-Sans-Bold";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 19px;
+  color: #fff;
+  background-color: #695d4f;
+  padding: 10px 20px;
+  border: 1px solid #695d4f;
+}
+.rightBtn {
+  background-color: #fff;
+  cursor: pointer;
+  color: #695d4f;
+}
+.leftBtn:hover {
+  cursor: pointer;
+  background-color: #544b4b;
+}
+@media (max-width: 1170px) {
+  .btnGroup {
+    justify-content: flex-start;
+  }
+  .leftBtn {
+    margin-right: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .btnGroup {
+    flex-direction: column;
+    text-align: center;
+    max-width: 100%;
+    padding-right: 0;
+  }
+  .leftBtn {
+    margin-bottom: 1rem;
+  }
+}
+
+.mainContent__CityTable {
+  grid-column: 1 / -1;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 1rem;
+}
+.mainContent__CityTable-title {
+  text-align: center;
+  font-family: "Cerebri-Sans-Medium";
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  padding-bottom: 1.5rem;
+}
+
+.mainContent__CityTableRow {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 42px;
+  color: #444;
+}
+.mainContent__TableRowDiv:last-child {
+  border-bottom: 1px solid #ddd;
+}
+.leftCityText {
+  width: 42.1%;
+}
+.rightCityText {
+  border-left: 1px solid #ddd !important;
+  padding-left: 1rem;
+}
+
+.whiteBack {
+  background-color: #fff;
+}
+.darkerBack {
+  background-color: rgba(0, 0, 0, 0.02);
 }
