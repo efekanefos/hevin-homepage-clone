@@ -345,6 +345,9 @@ input:focus {
 #shippingLeft {
   align-self: flex-start !important;
 }
+#shipping__radio {
+  pointer-events: none;
+}
 #shipping__Info {
   line-height: 2.2 !important;
   font-family: "Roboto", sans-serif;
