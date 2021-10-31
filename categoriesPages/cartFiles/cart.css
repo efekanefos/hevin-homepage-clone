@@ -75,9 +75,10 @@
 .mainContent__productTableHead-list {
   display: flex;
   list-style: none;
-  justify-content: space-around;
-  padding: 1rem;
-  padding-left: 13rem;
+  align-items: center;
+  padding: 0.8rem;
+  justify-content: space-around !important;
+  position: relative;
 }
 
 .mainContent__productTableHead-listItem {
@@ -88,25 +89,12 @@
   color: #000;
 }
 
-#title__product {
-  padding-right: 25%;
-}
-#title__count {
-  padding-right: 18%;
-}
-#title__price {
-  padding-right: 11%;
-}
-#title__total {
-  padding-right: 3%;
-}
-
 .mainContent__productTableRow {
   display: flex;
   border: 1px solid rgba(230, 230, 230, 0.5);
   align-items: center;
   padding: 0.8rem;
-  justify-content: space-around;
+  justify-content: flex-start !important;
 }
 
 .mainContent__productTableRow img {
@@ -122,13 +110,10 @@
   text-align: center;
   margin-left: 1rem;
 }
-#firstImg {
-  margin-left: 2.5rem !important;
+#iconHidden {
+  visibility: hidden;
 }
-#row2 img,
-#row3 img {
-  margin-left: 5rem;
-}
+
 #row1,
 #row2 {
   border-bottom: none;
@@ -145,6 +130,8 @@
   font-size: 15px;
   line-height: 14px;
   color: #000;
+  margin-right: 1%;
+  width: 50%;
 }
 .productName:hover {
   color: #695d4f;
@@ -219,7 +206,7 @@
   display: flex;
   padding: 0rem 1.5rem;
   align-items: center;
-  justify-content: center !important;
+  justify-content: flex-start !important;
 }
 .couponLabel {
   font-family: "Roboto", sans-serif;
@@ -257,27 +244,20 @@ input:focus {
   background-color: #544b4b;
   cursor: pointer;
 }
+
 @media (max-width: 1170px) {
   .mainContent__productTable {
     grid-column: 1 / -1;
   }
-
   .mainContent__priceTable {
     margin-top: -2rem;
     grid-column: 1 / -1;
     grid-row: 2 / -1;
   }
-  #title__product {
-    padding-right: 28.5%;
-  }
-  #title__count {
-    padding-right: 15%;
-  }
-  #title__price {
-    padding-right: 11%;
-  }
-  #title__total {
-    padding-right: 10%;
+
+  .productInfo {
+    margin-right: 4%;
+    width: 15rem !important;
   }
 }
 @media (max-width: 850px) {
@@ -435,6 +415,7 @@ input:focus {
   }
   .leftBtn {
     margin-bottom: 1rem;
+    margin-right: 0;
   }
 }
 
