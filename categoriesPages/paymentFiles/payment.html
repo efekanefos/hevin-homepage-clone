@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./payment.css" />
+    <title>Ödeme - Hevin Mobilya</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- UpperHeader Start -->
+      <header class="upper-header">
+        <ul class="main-menu">
+          <li><a href="#">Kurumsal</a></li>
+          <li><a href="#">E-katalog</a></li>
+          <li><a href="#">Satış Noktaları</a></li>
+          <li><a href="#">İletişim</a></li>
+        </ul>
+        <ul class="follow-menu">
+          <li>
+            <a href="#"><i class="far fa-envelope"></i> online@hevin.com.tr</a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </li>
+        </ul>
+      </header>
+      <!-- UpperHeader Finish -->
+
+      <!-- Header Start -->
+      <header class="header" id="header">
+        <div>
+          <label for="openSidebarMenu" class="sidebarIconToggle">
+            <i class="menu-icon fas fa-bars"></i>
+          </label>
+        </div>
+
+        <img class="logo" src="../../img/Hevin_Logo.svg" alt="logo" />
+        <input
+          type="text"
+          class="searchBar"
+          placeholder="Ürün ve kategorileri ara..."
+        />
+        <button class="btn">ARA</button>
+        <div class="loginDiv">
+          <h5><i class="far fa-arrow-alt-circle-right"></i> Giriş Yap</h5>
+          <i class="heartIcon far fa-heart"></i>
+          <span class="badge badge-heart">0</span>
+          <img class="bagIcon" src="../../img/shopping-bagBold.png" alt="1" />
+          <span class="badge badge-bag">0</span>
+        </div>
+      </header>
+      <!-- Header Finish -->
+
+      <!-- DarkLinks Start -->
+      <header class="dark-links" id="dark-links">
+        <ul class="dark-menu">
+          <li><a href="#">çok satanlar</a></li>
+          <li><a href="#">koleksiyonlar</a></li>
+          <li><a href="#">oturma odası</a></li>
+          <li><a href="#">yatak odası</a></li>
+          <li><a href="#">yemek odası</a></li>
+          <li><a href="#">tv üniteleri</a></li>
+          <li><a href="#">orta sehpalar</a></li>
+          <li><a href="#">tekil modüler</a></li>
+          <li><a href="#">kampanyalar</a></li>
+          <li><a id="lastMenuItem" href="#">fırsat ürünleri</a></li>
+        </ul>
+      </header>
+      <!-- DarkLinks Finish -->
+      <!-- DarkLinks-Mobile Start -->
+      <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+
+      <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
+          <li class="close-btn">
+            <label for="openSidebarMenu">
+              <div href="#" class="closeDiv">
+                <span>KAPAT</span>
+                <i class="fas fa-times"></i>
+              </div>
+            </label>
+          </li>
+
+          <li><a href="#">çok satanlar</a></li>
+          <li><a href="#">koleksiyonlar</a></li>
+          <li>
+            <a href="./categoriesPages/livingRoomFiles/livingRoom.html"
+              >oturma odası</a
+            >
+          </li>
+          <li><a href="#">yatak odası</a></li>
+          <li><a href="#">yemek odası</a></li>
+          <li><a href="#">tv üniteleri</a></li>
+          <li><a href="#">orta sehpalar</a></li>
+          <li><a href="#">tekil modüler</a></li>
+          <li><a href="#">kampanyalar</a></li>
+          <li><a href="#">fırsat ürünleri</a></li>
+        </ul>
+      </div>
+      <!-- DarkLinks-Mobile Finish -->
+
+      <!-- Mobile-Bottom-Menu Start -->
+
+      <section class="bottomMenu">
+        <ul>
+          <li><i class="fas fa-store"></i></li>
+          <li><i class="far fa-user"></i></li>
+          <li><i class="fas fa-search"></i></li>
+          <li><i class="far fa-heart"></i></li>
+        </ul>
+      </section>
+
+      <!-- Mobile-Bottom-Menu Finish -->
+
+      <!-- Banner Section Start -->
+
+      <section class="banner">
+        <div class="banner__content">
+          <h1 class="banner__title">Ödeme</h1>
+          <h4 class="banner__subTitle">Ana Sayfa > Ödeme</h4>
+        </div>
+      </section>
+
+      <!-- Banner Section Finish -->
+
+      <!-- Coupon Section Start -->
+
+      <section class="couponSection">
+        <div class="coupon">
+          <p class="couponParag">
+            <i class="fas fa-clone"></i> Kuponunuz var mı?
+            <span class="boldParag"
+              >Kupon kodunuzu girmek için buraya tıklayın</span
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- Coupon Section Finish -->
+
+      <!-- Main Content Start -->
+
+      <section class="mainContentSection">
+        <div class="mainContent">
+          <div class="mainContent__form">
+            <h2 class="mainContent__formTitle">FATURA DETAYLARI</h2>
+            <div class="mainContent__formSelection">
+              <label for="billing_selection" class="billing">
+                <p>
+                  Fatura Tipi <abbr class="required" title="required">*</abbr>
+                </p>
+                <i class="fas fa-sort-down arrowIcon"></i>
+
+                <select
+                  name="billing_selection"
+                  id="billing_selection"
+                  data-required="1"
+                  data-placeholder=""
+                >
+                  <option class="option1" value="Bireysel">Bireysel</option>
+                  <option class="option1" value="Kurumsal">Kurumsal</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="paymentInputs">
+              <div class="paymentInput">
+                <p>Ad <abbr class="required" title="required">*</abbr></p>
+                <input
+                  type="text"
+                  name="billing_first_name"
+                  id="billing_first_name"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="paymentInput">
+                <p>Soyad <abbr class="required" title="required">*</abbr></p>
+                <input
+                  type="text"
+                  name="billing_last_name"
+                  id="billing_last_name"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="paymentInput">
+                <p>Telefon <abbr class="required" title="required">*</abbr></p>
+                <input
+                  type="text"
+                  name="billing_phoneNumber"
+                  id="billing_phoneNumber"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  E-posta adresi
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+                <input
+                  type="email"
+                  name="billing_email"
+                  id="billing_email"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  Ülke
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+
+                <select name="country" id="country"></select>
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  Şehir
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+                <select name="country" id="country"></select>
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  İlçe
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+                <input
+                  type="text"
+                  name="billing_city2"
+                  id="billing_city2"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  Kasaba/Köy (isteğe bağlı)
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+                <input
+                  type="text"
+                  name="billing_littleCity"
+                  id="billing_littleCity"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  Adres
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+                <input
+                  type="text"
+                  name="billing_littleCity"
+                  placeholder="Adres Bilgileriniz"
+                  id="billing_littleCity"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="anotherAddress">
+                <input
+                  type="radio"
+                  name="anotherAddress"
+                  id="anotherAddress__radio"
+                />
+                <p class="anotherAddress__parag">
+                  FARKLI BİR ADRESE GÖNDERİLSİN Mİ?
+                </p>
+              </div>
+
+              <div class="notes">
+                <p>Siparişinizle ilgili notlar (isteğe bağlı)</p>
+                <textarea
+                  name="notesTextArea"
+                  id="notesTextArea"
+                  cols="30"
+                  rows="20"
+                  placeholder="Siparişiniz ile ilgili notlar. örn. teslimat için özel notlar."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="mainContent__payment">
+            <h2 class="mainContent__formTitle">SİPARİŞİNİZ</h2>
+            <div class="productCard">
+              <div class="productCard__info">
+                <div class="tableSpace">
+                  <table class="infoCardTable">
+                    <thead class="infoCardTable-tableHead">
+                      <tr class="infoCardTable-tableRow">
+                        <th class="productHeadName">Ürün</th>
+                        <th class="productTotal">Ara Toplam</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="productInfo">
+                        <td class="productName">
+                          Olivia Üçlü Koltuk Yeşil <strong>× 1</strong>
+                          <dl>
+                            <dt class="productKind">Takım:</dt>
+                            <dd class="productGroup">
+                              Olivia Koltuk Takımı Yeşil
+                            </dd>
+                          </dl>
+                        </td>
+                        <td class="productPrice">₺4.400</td>
+                      </tr>
+
+                      <tr>
+                        <td class="productName">
+                          Olivia Yataklı Üçlü Koltuk Vizon <strong>× 1</strong>
+                          <dl>
+                            <dt class="productKind">Takım:</dt>
+                            <dd class="productGroup">
+                              Olivia Koltuk Takımı Yeşil
+                            </dd>
+                          </dl>
+                        </td>
+                        <td class="productPrice">₺5.280</td>
+                      </tr>
+
+                      <tr>
+                        <td class="productName">
+                          Olivia Berjer Vizon <strong>× 1</strong>
+                          <dl>
+                            <dt class="productKind">Takım:</dt>
+                            <dd class="productGroup">
+                              Olivia Koltuk Takımı Yeşil
+                            </dd>
+                          </dl>
+                        </td>
+                        <td class="productPrice">₺1.920</td>
+                      </tr>
+
+                      <tr>
+                        <td class="productName bottomProductInfo">
+                          Ara Toplam
+                        </td>
+                        <td class="productPrice">₺11.600</td>
+                      </tr>
+
+                      <tr>
+                        <td class="productName bottomProductInfo">
+                          Sepette 10% İndirim
+                        </td>
+                        <td id="discountText" class="productPrice">-₺1.160</td>
+                      </tr>
+
+                      <tr>
+                        <td class="productName bottomProductInfo-shipping">
+                          Gönderim
+                        </td>
+                        <td id="addressText" class="productPrice">
+                          Gönderim seçeneklerinizi görüntülemek için adresinizi
+                          girin.
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td class="productName totalPriceInfo">Toplam</td>
+                        <td id="totalPrice" class="productPrice">₺10.440</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <div class="paymentOptions">
+                    <input type="radio" name="creditCard" id="creditCard" />
+                    <p>Banka/Kredi Kartı ile Öde</p>
+                    <img src="./paymentImages/cards.png" alt="cards" />
+                    <p class="securityParag">
+                      Kredi kartı veya banka kartı ile güvenli ödeme
+                      yapabilirsiniz.
+                    </p>
+
+                    <div class="otherOption">
+                      <input type="radio" name="creditCard" id="otherCard" />
+                      <img src="./paymentImages/pwi_tr.png" alt="cards" />
+                      <p>Alışverişlerini hızla ve kolayca iyzico ile Öde!</p>
+                    </div>
+
+                    <p class="otherExplain">
+                      iyzico ile Öde-Şimdi Kolay! <br />
+                      Alışverişini ister iyzico bakiyenle, ister saklı kartınla,
+                      <br />
+                      ister havale/EFT yöntemi ile kolayca öde; aklına takılan
+                      herhangi bir konuda iyzico Korumalı Alışveriş avantajıyla
+                      <br />
+                      7/24 canlı destek al.
+                    </p>
+
+                    <span class="paymentBtn"> İYZİCO İLE ÖDE </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Content Finish -->
+
+      <!-- Footer Start -->
+      <!-- Payment Start -->
+      <section class="paymentSection">
+        <section class="payment">
+          <div class="creditCard">
+            <i class="fab fa-cc-mastercard"></i>
+            <div class="creditContent">
+              <h3>TAKSİT İMKANI</h3>
+              <p>
+                Bonus, World, Maximum, Axess, Paraf, Card Finans ve Advantage
+                kredi kartları ile 3, 6, 9 taksitle ödeme yapabilirsiniz.
+              </p>
+            </div>
+          </div>
+          <div class="security">
+            <i class="lockIcon fab fa-expeditedssl"></i>
+            <div class="securityContent">
+              <h3>GÜVENLİ ÖDEME</h3>
+              <p>
+                Güvenli ödeme sisteminin altyapısı Türkiye'nin önde gelen ödeme
+                sistemleri firması İyzico tarafından sağlanmaktadır.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Payment Finish -->
+      <!-- upperFooter Start -->
+      <section class="upperFooterSection">
+        <div class="upperFooter">
+          <div class="socialLinks">
+            <img src="../../img/logo_dark-2.png" alt="logo" />
+            <p>Sosyal medyada bizi takip etmeyi unutmayın.</p>
+            <ul>
+              <li><i class="fab fa-twitter"></i></li>
+              <li><i class="fab fa-instagram"></i></li>
+              <li><i class="fab fa-facebook-f"></i></li>
+              <li><i class="fab fa-youtube"></i></li>
+              <li><i class="fab fa-linkedin-in"></i></li>
+              <li><i class="fab fa-pinterest"></i></li>
+            </ul>
+          </div>
+          <div class="categories">
+            <ul>
+              <li><h4>KATEGORİLER</h4></li>
+              <div class="borderLeft"></div>
+              <li><a href="#">Oturma Odası</a></li>
+              <li><a href="#">Yatak Odası</a></li>
+              <li><a href="#">Yemek Odası</a></li>
+              <li><a href="#">Tv Üniteleri</a></li>
+              <li><a href="#">Orta Sehpalar</a></li>
+            </ul>
+          </div>
+          <div class="communication">
+            <ul>
+              <li><h4>BİZİ TANIYIN</h4></li>
+              <div class="borderLeft"></div>
+              <li><a href="#">Kurumsal</a></li>
+              <li><a href="#">İletişim</a></li>
+              <li><a href="#">Satış Noktaları</a></li>
+              <li><a href="#">Kariyer</a></li>
+            </ul>
+          </div>
+          <div class="policy">
+            <ul>
+              <li><h4>HİZMET & POLİTİKALAR</h4></li>
+              <div class="borderLeft"></div>
+              <li><a href="#">Sipariş Takip</a></li>
+              <li><a href="#">Mesafeli Satış Sözleşmesi</a></li>
+              <li><a href="#">Teslimat & İade</a></li>
+              <li><a href="#">Gizlilik Politikası</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- upperFooter Finish -->
+
+      <!-- Footer Start -->
+      <section class="footerSection">
+        <section class="footer">
+          <img src="../../img/visa-mastercard-iyzico.png" alt="card" />
+          <p>© 2021 – Hevin Mobilya. Tüm hakları saklıdır.</p>
+        </section>
+      </section>
+
+      <!-- Footer Finish -->
+      <!-- Footer Finish -->
+
+      <script src="./payment.js"></script>
+    </div>
+  </body>
+</html>

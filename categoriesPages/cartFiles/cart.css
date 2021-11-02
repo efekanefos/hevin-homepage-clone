@@ -76,8 +76,8 @@
   display: flex;
   list-style: none;
   align-items: center;
+  justify-content: space-around;
   padding: 0.8rem;
-  justify-content: space-around !important;
   position: relative;
 }
 
@@ -276,6 +276,29 @@ input:focus {
     display: flex;
     flex-direction: column;
   }
+  #title__product {
+    position: relative;
+    top: 50%;
+    left: 0rem;
+  }
+
+  #title__count {
+    position: relative;
+    top: 50%;
+    left: -0.8rem;
+  }
+
+  #title__price {
+    position: relative;
+    top: 50%;
+    left: -5.5rem;
+  }
+
+  #title__total {
+    position: relative;
+    top: 50%;
+    left: -1rem;
+  }
 }
 @media (max-width: 600px) {
   .mainContent__productTableRow img {
@@ -392,6 +415,11 @@ input:focus {
   padding: 10px 20px;
   border: 1px solid #695d4f;
 }
+.leftBtn a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .rightBtn {
   background-color: #fff;
   cursor: pointer;
