@@ -175,19 +175,160 @@
                 </p>
                 <i class="fas fa-sort-down arrowIcon"></i>
 
-                <select
-                  name="billing_selection"
-                  id="billing_selection"
-                  data-required="1"
-                  data-placeholder=""
-                >
-                  <option class="option1" value="Bireysel">Bireysel</option>
-                  <option class="option1" value="Kurumsal">Kurumsal</option>
+                <select name="billing_selection" id="billing_selection">
+                  <option id="personal" class="option1" value="Bireysel">
+                    Bireysel
+                  </option>
+                  <option id="business" class="option1" value="Kurumsal">
+                    Kurumsal
+                  </option>
                 </select>
               </label>
             </div>
 
-            <div class="paymentInputs">
+            <div id="businessInputs" class="paymentInputs">
+              <div class="paymentInput">
+                <p>
+                  Firma Adı <abbr class="required" title="required">*</abbr>
+                </p>
+                <input
+                  type="text"
+                  name="billing_first_name"
+                  id="billing_first_name"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  Firma Vergi Dairesi
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+                <input
+                  type="text"
+                  name="billing_first_name"
+                  id="billing_first_name"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  Firma Vergi No
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+                <input
+                  type="text"
+                  name="billing_last_name"
+                  id="billing_last_name"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="paymentInput">
+                <p>Telefon <abbr class="required" title="required">*</abbr></p>
+                <input
+                  type="text"
+                  name="billing_phoneNumber"
+                  id="billing_phoneNumber"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  E-posta adresi
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+                <input
+                  type="email"
+                  name="billing_email"
+                  id="billing_email"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  Ülke
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+
+                <select name="country" id="country" class="country"></select>
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  Şehir
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+                <select name="country" id="country"></select>
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  İlçe
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+                <input
+                  type="text"
+                  name="billing_city2"
+                  id="billing_city2"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  Kasaba/Köy (isteğe bağlı)
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+                <input
+                  type="text"
+                  name="billing_littleCity"
+                  id="billing_littleCity"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="paymentInput">
+                <p>
+                  Adres
+                  <abbr class="required" title="required">*</abbr>
+                </p>
+                <input
+                  type="text"
+                  name="billing_littleCity"
+                  placeholder="Adres Bilgileriniz"
+                  id="billing_littleCity"
+                  data-required="1"
+                />
+              </div>
+
+              <div class="anotherAddress">
+                <input
+                  type="radio"
+                  name="anotherAddress"
+                  id="anotherAddress__radio"
+                />
+                <p class="anotherAddress__parag">
+                  FARKLI BİR ADRESE GÖNDERİLSİN Mİ?
+                </p>
+              </div>
+
+              <div class="notes">
+                <p>Siparişinizle ilgili notlar (isteğe bağlı)</p>
+                <textarea
+                  name="notesTextArea"
+                  id="notesTextArea"
+                  cols="30"
+                  rows="20"
+                  placeholder="Siparişiniz ile ilgili notlar. örn. teslimat için özel notlar."
+                ></textarea>
+              </div>
+            </div>
+
+            <div id="personalInputs" class="paymentInputs">
               <div class="paymentInput">
                 <p>Ad <abbr class="required" title="required">*</abbr></p>
                 <input
@@ -237,7 +378,7 @@
                   <abbr class="required" title="required">*</abbr>
                 </p>
 
-                <select name="country" id="country"></select>
+                <select name="country" id="country" class="country"></select>
               </div>
 
               <div class="paymentInput">

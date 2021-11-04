@@ -122,6 +122,13 @@
   pointer-events: none;
   color: gray;
 }
+
+#personalInputs {
+  display: block;
+}
+#businessInputs {
+  display: none;
+}
 #billing_selection {
   font-family: "Cerebri-Sans-Regular";
   font-weight: 400;
@@ -137,8 +144,8 @@
   border: 1px solid #ddd;
   cursor: pointer;
 }
-#billing_wooccm11:focus {
-  outline: none;
+#billing_selection:focus {
+  outline: none !important;
 }
 abbr {
   color: red;
@@ -319,6 +326,7 @@ tr .productPrice {
   margin-bottom: 0.1rem !important;
   margin-right: 0.5rem;
 }
+
 .paymentOptions img {
   width: 50%;
   margin-left: 1rem;
@@ -370,6 +378,7 @@ tr .productPrice {
 .paymentBtn:hover {
   background-color: #695d4f;
 }
+
 @media (max-width: 1170px) {
   .mainContent__form {
     grid-column: 1 / -1;
@@ -381,6 +390,10 @@ tr .productPrice {
   }
   .paymentOptions img {
     width: 30%;
+  }
+  .paymentOptions input {
+    margin-bottom: 0.3rem !important;
+    margin-right: 0.5rem;
   }
   .otherOption img {
     width: 15%;
