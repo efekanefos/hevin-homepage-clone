@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const selectDrop = document.querySelector("#country");
+  const selectDropPersonal = document.querySelector(".countryPersonal");
+
   var countryArr = [
-    "Bir ülke/bölge seçin…",
     "Afganistan",
     "Åland Adaları",
     "Almanya",
@@ -252,11 +253,12 @@ document.addEventListener("DOMContentLoaded", () => {
     "Zambia",
     "Zimbabve",
   ];
-  let output = "";
+  let output = `<li id="firstListItem">Bir ülke/bölge seçin…</li>`;
   countryArr.forEach((country) => {
-    output += `<option value="${country}">${country}</option>`;
+    output += `<li value="${country}">${country}</li>`;
   });
   selectDrop.innerHTML = output;
+  selectDropPersonal.innerHTML = output;
 });
 
 let personalOption = document.querySelector("#personal");
@@ -264,7 +266,6 @@ let businessOption = document.querySelector("#business");
 
 let personalInputs = document.querySelector("#personalInputs");
 let businessInputs = document.querySelector("#businessInputs");
-
 document
   .getElementById("billing_selection")
   .addEventListener("change", function () {
@@ -279,3 +280,87 @@ document
 
 personalOption.addEventListener("click", function () {});
 businessOption.addEventListener("click", function () {});
+
+/* Radio Button Toggle */
+
+var anotherAddressBtnPersonal = document.querySelector(
+  "#anotherAddressBtnPersonal"
+);
+var anotherAddressBtnBusiness = document.querySelector(
+  "#anotherAddressBtnBusiness"
+);
+var innerAnotherAddressPersonal = document.querySelector(
+  "#innerAnotherAddressPersonal"
+);
+
+var innerAnotherAddressBusiness = document.querySelector(
+  "#innerAnotherAddressBusiness"
+);
+
+innerAnotherAddressPersonal.style.display = "none";
+
+innerAnotherAddressBusiness.style.display = "none";
+
+anotherAddressBtnPersonal.addEventListener("click", function () {
+  anotherAddressBtnPersonal.classList.toggle("activeRadio");
+
+  if (anotherAddressBtnPersonal.classList.contains("activeRadio")) {
+    innerAnotherAddressPersonal.style.display = "block";
+  } else {
+    innerAnotherAddressPersonal.style.display = "none";
+  }
+});
+anotherAddressBtnBusiness.addEventListener("click", function () {
+  anotherAddressBtnBusiness.classList.toggle("activeRadio");
+
+  if (anotherAddressBtnBusiness.classList.contains("activeRadio")) {
+    innerAnotherAddressBusiness.style.display = "block";
+  } else {
+    innerAnotherAddressBusiness.style.display = "none";
+  }
+});
+
+/* Payment Btns */
+
+var creditCardBtn = document.querySelector(".creditCardBtn");
+var iyzicoBtn = document.querySelector(".iyzicoBtn");
+var otherExplain = document.querySelector(".otherExplain");
+var iyzicoSection = document.querySelector(".iyzicoSection");
+
+/* Inıt function */
+otherExplain.style.display = "none";
+creditCardBtn.classList.add("creditCard__active");
+/* Inıt */
+
+creditCardBtn.addEventListener("click", function () {
+  creditCardBtn.classList.toggle("creditCard__active");
+  if (creditCardBtn.classList.contains("creditCard__active")) {
+    iyzicoBtn.classList.remove("iyzicoBtn__active");
+    otherExplain.style.display = "none";
+    iyzicoSection.style.marginTop = "0px";
+  }
+});
+iyzicoBtn.addEventListener("click", function () {
+  iyzicoBtn.classList.toggle("iyzicoBtn__active");
+  if (iyzicoBtn.classList.contains("iyzicoBtn__active")) {
+    creditCardBtn.classList.remove("creditCard__active");
+    otherExplain.style.display = "block";
+    iyzicoSection.style.marginTop = "-50px";
+  }
+});
+
+/*  scrollbar */
+
+var countryPersonal = document.querySelector(".countryPersonal");
+var countryArrowIcon = document.querySelector("#countryArrowIcon");
+
+countryArrowIcon.addEventListener("click", function () {
+  countryPersonal.classList.toggle("openCountryPersonal");
+  if (countryPersonal.classList.contains("openCountryPersonal")) {
+    countryArrowIcon.style.transform = "rotate(180deg)";
+    countryArrowIcon.style.marginTop = "5px";
+  } else {
+    countryArrowIcon.style.transform = "rotate(0deg)";
+    countryArrowIcon.style.marginTop = "0px";
+  }
+});
