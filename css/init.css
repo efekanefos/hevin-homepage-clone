@@ -789,6 +789,19 @@ body {
     font-size: 14px;
     line-height: 22px;
   }
+  .bottomMenuImg {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+  }
+  #searchImg {
+    width: 20px;
+    height: 20px;
+  }
+  #personImg {
+    width: 20px;
+    height: 20px;
+  }
 
   /* Bottom Menu Finish */
 }
