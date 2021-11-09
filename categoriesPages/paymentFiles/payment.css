@@ -88,7 +88,7 @@
 .mainContent {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr;
   grid-gap: 2.5rem;
   padding: 1rem;
   max-width: 1440px;
@@ -229,7 +229,6 @@ abbr {
 }
 #countryPaymentInput {
   position: relative;
-  margin-bottom: 4rem;
 }
 
 #countryArrowIcon {
@@ -282,6 +281,9 @@ abbr {
   margin-top: 2rem;
   margin-bottom: 2rem;
   display: flex;
+}
+.innerAnotherAddress {
+  margin-bottom: 1.5rem;
 }
 
 .anotherAddress__parag {
@@ -481,7 +483,7 @@ tr .productPrice {
 @media (max-width: 1170px) {
   .mainContent__form {
     grid-column: 1 / -1;
-    grid-row: 1 / 1;
+    grid-row: 1 / 2;
   }
   .mainContent__payment {
     grid-column: 1 / -1;
@@ -497,4 +499,157 @@ tr .productPrice {
   .otherOption img {
     width: 15%;
   }
+}
+
+.select-box,
+.select-box2,
+.select-box3,
+.select-box4 {
+  position: relative;
+  display: flex;
+  width: 100% !important;
+  flex-direction: column;
+}
+.select-box .options-container,
+.select-box2 .options-container2,
+.select-box3 .options-container3,
+.select-box4 .options-container4 {
+  background: #fff;
+  color: #444;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 10px;
+  font-size: 14px;
+  order: 1;
+  border: 1px solid #aaa;
+  border-top: none;
+  position: absolute;
+  top: 5.2rem;
+}
+
+.selected,
+.selected2,
+.selected3,
+.selected4 {
+  background: #fff;
+  color: #444;
+  font-family: "Cerebri-Sans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 40px;
+  font-size: 14px;
+  position: relative;
+  order: 0;
+}
+
+.select-box .options-container.active,
+.select-box2 .options-container2.active,
+.select-box3 .options-container3.active,
+.select-box4 .options-container4.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after,
+.select-box2 .options-container2.active + .selected2::after,
+.select-box3 .options-container3.active + .selected3::after,
+.select-box4 .options-container4.active + .selected4::after {
+  transform: rotateX(180deg) !important;
+  top: -6px;
+}
+
+.select-box .option,
+.selected,
+.select-box2 .option2,
+.selected2,
+.select-box3 .option3,
+.selected3,
+.select-box4 .option4,
+.selected4 {
+  padding: 12px 6px;
+  cursor: pointer;
+}
+.selected,
+.selected2,
+.selected3,
+.selected4 {
+  padding: 0;
+}
+
+.select-box .option:hover,
+.select-box2 .option2:hover,
+.select-box3 .option3:hover,
+.select-box4 .option4:hover {
+  background: #0073aa;
+  color: #fff;
+}
+
+.select-box label,
+.select-box2 label,
+.select-box3 label,
+.select-box4 label {
+  cursor: pointer;
+}
+
+.select-box .option .radio,
+.select-box2 .option2 .radio,
+.select-box3 .option3 .radio,
+.select-box4 .option4 .radio {
+  display: none;
+}
+
+/* Searchbox */
+
+.select-box .options-container.active ~ .search-box,
+.select-box2 .options-container2.active ~ .search-box2,
+.select-box3 .options-container3.active ~ .search-box3,
+.select-box4 .options-container4.active ~ .search-box4 {
+  border: 1px solid #aaa;
+  padding: 0.1rem;
+  border-top: none;
+  border-bottom: none;
+}
+
+.search-box input,
+.search-box2 input,
+.search-box3 input,
+.search-box4 input {
+  width: 99.5%;
+  padding: 6px 16px;
+  display: block !important;
+  margin: 0 auto !important;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  border: 1px solid #ddd;
+}
+.cityInput,
+.cityInput2,
+.cityInput3,
+.cityInput4 {
+  margin-top: -0.2rem;
+}
+
+.search-box input:focus,
+.search-box2 input:focus,
+.search-box3 input:focus,
+.search-box4 input:focus {
+  outline: none;
+}
+
+.select-box .options-container.active ~ .search-box input,
+.select-box2 .options-container2.active ~ .search-box2 input,
+.select-box3 .options-container3.active ~ .search-box3 input,
+.select-box4 .options-container4.active ~ .search-box4 input {
+  opacity: 1;
+  pointer-events: auto;
 }

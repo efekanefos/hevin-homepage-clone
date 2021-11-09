@@ -68,27 +68,36 @@
 }
 
 .mainContent__productTableHead {
-  background-color: #f5f5f5;
-  max-width: 100%;
-}
-
-.mainContent__productTableHead-list {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0.8rem;
-  position: relative;
+  background-color: #f5f5f5 !important;
+  width: 100% !important;
 }
 
 .mainContent__productTableHead-listItem {
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   line-height: 22px;
+  padding: 1rem !important;
   color: #000;
 }
+.productInfoColumn {
+  display: flex;
+  align-items: center;
+}
+table {
+  border-collapse: collapse;
+  border: 1px solid rgba(230, 230, 230, 0.5);
+}
+.borderclass {
+  border-bottom: 1px solid rgba(230, 230, 230, 0.5);
+  border-right: none;
+  border-collapse: collapse;
+}
+#tableRow {
+  line-height: 1.2rem;
+}
 
+/*
 .mainContent__productTableRow {
   display: flex;
   border: 1px solid rgba(230, 230, 230, 0.5);
@@ -96,22 +105,25 @@
   padding: 0.8rem;
   justify-content: flex-start !important;
 }
-
-.mainContent__productTableRow img {
-  width: 9%;
+*/
+.mainContent__productTable img {
+  width: 15%;
   margin-left: 2rem;
-  margin-right: 2rem;
+  margin-right: 3rem;
 }
 
 .removeIcon {
   border: 1.9px solid #e6e6e6;
   border-radius: 50%;
   text-align: center;
-  padding: 0.9rem 0.2rem;
+  padding: 1rem 0.3rem;
   padding-top: 0.5rem;
-  font-size: 1.5rem;
-  line-height: 0;
-  margin-left: 1rem;
+  font-size: 1.3rem;
+  height: 1.3rem;
+  font-weight: 400;
+  line-height: 0.23;
+  margin-left: 1.5rem;
+  margin-right: 0.5rem;
 }
 
 .removeIcon:hover {
@@ -125,9 +137,8 @@
   visibility: hidden;
 }
 
-#row1,
-#row2 {
-  border-bottom: none;
+.couponRow {
+  padding: 0.8rem;
 }
 
 .productInfo {
@@ -216,7 +227,7 @@
 }
 .couponLabel {
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   line-height: 22px;
   color: #444444;
@@ -230,7 +241,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
-  width: 70%;
+  width: 75%;
 }
 .couponBtn {
   font-family: "Cerebri-Sans-Bold";
@@ -281,29 +292,6 @@ input:focus {
   .prices {
     display: flex;
     flex-direction: column;
-  }
-  #title__product {
-    position: relative;
-    top: 50%;
-    left: 0rem;
-  }
-
-  #title__count {
-    position: relative;
-    top: 50%;
-    left: -0.8rem;
-  }
-
-  #title__price {
-    position: relative;
-    top: 50%;
-    left: -5.5rem;
-  }
-
-  #title__total {
-    position: relative;
-    top: 50%;
-    left: -1rem;
   }
 }
 @media (max-width: 600px) {

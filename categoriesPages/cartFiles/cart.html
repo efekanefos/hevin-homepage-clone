@@ -168,6 +168,184 @@
       <section class="mainContentSection">
         <div class="mainContent">
           <div class="mainContent__productTable">
+            <table class="borderclass-table">
+              <thead class="mainContent__productTableHead">
+                <tr>
+                  <th class="mainContent__productTableHead-listItem">ÜRÜN</th>
+                  <th class="mainContent__productTableHead-listItem">ADET</th>
+                  <th class="mainContent__productTableHead-listItem">FİYAT</th>
+                  <th class="mainContent__productTableHead-listItem">TOPLAM</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="tableRow">
+                  <td class="borderclass">
+                    <span class="productInfoColumn"
+                      ><span class="removeIcon">×</span>
+                      <img
+                        src="./cartImages/olivia_koltuk_1_1-1000x750.jpg"
+                        alt="1"
+                      />
+                      <span class="productInfo">
+                        <p class="productName">
+                          Olivia Üçlü Koltuk Yeşil
+                        </p>
+                        <p class="productSubName">
+                          <span class="productKind">Takım:</span> Olivia Koltuk Takımı Yeşil
+                        </p>
+                      </span></span
+                    >
+                  </td>
+
+                  <td class="borderclass">
+                    <span class="productCounter">
+                      <ul class="productCounter-list">
+                        <li class="productCounter-listItem">
+                          <i class="fas fa-minus"></i>
+                        </li>
+                        <li
+                          id="productCounter-middlelistItem"
+                          class="productCounter-listItem"
+                        >
+                          1
+                        </li>
+                        <li class="productCounter-listItem">
+                          <i class="fas fa-plus"></i>
+                        </li>
+                      </ul>
+                    </span>
+                  </td>
+
+                  <td class="borderclass">
+                    <span class="prices">
+                      <span class="discountedPrice">₺7.333</span
+                      ><span class="updatedPrice">₺4.400</span>
+                    </span>
+                  </td>
+
+                  <td class="borderclass">
+                    <span class="totalPrice"> ₺26.400 </span>
+                  </td>
+                </tr>
+
+                <tr id="tableRow">
+                  <td class="borderclass">
+                    <span class="productInfoColumn">
+                      <span id="iconHidden" class="removeIcon">×</span>
+                      <img
+                        src="./cartImages/olivia_koltuk_1_2-1000x750.jpg"
+                        alt="1"
+                      />
+                      <span class="productInfo">
+                        <p class="productName">
+                          Olivia Yataklı Üçlü Koltuk Vizon
+                        </p>
+                        <p class="productSubName">
+                          <span class="productKind">Takım:</span> Olivia Koltuk Takımı Yeşil
+                        </p>
+                      </span></span
+                    >
+                  </td>
+                  <td class="borderclass">
+                    <span class="productCounter">
+                      <ul class="productCounter-list">
+                        <li class="productCounter-listItem">
+                          <i class="fas fa-minus"></i>
+                        </li>
+                        <li
+                          id="productCounter-middlelistItem"
+                          class="productCounter-listItem"
+                        >
+                          1
+                        </li>
+                        <li class="productCounter-listItem">
+                          <i class="fas fa-plus"></i>
+                        </li>
+                      </ul>
+                    </span>
+                  </td>
+                  <td class="borderclass">
+                    <span class="prices">
+                      <span class="discountedPrice">₺7.333</span
+                      ><span class="updatedPrice">₺4.400</span>
+                    </span>
+                  </td>
+                  <td class="borderclass">
+                    <span class="totalPrice"> ₺5.280 </span>
+                  </td>
+                </tr>
+
+                <tr id="tableRow">
+                  <td class="borderclass">
+                    <span class="productInfoColumn">
+                      <span id="iconHidden" class="removeIcon">×</span>
+                      <img
+                        src="./cartImages/olivia_berjer_1_1-1000x750.jpg"
+                        alt="1"
+                      />
+                      <span class="productInfo">
+                        <p class="productName">
+                          Olivia Berjer Vizon
+                        </p>
+                        <p class="productSubName">
+                          <span class="productKind">Takım:</span> Olivia Koltuk Takımı Yeşil
+                        </p>
+                      </span></span
+                    >
+                  </td>
+                  <td class="borderclass">
+                    <span class="productCounter">
+                      <ul class="productCounter-list">
+                        <li class="productCounter-listItem">
+                          <i class="fas fa-minus"></i>
+                        </li>
+                        <li
+                          id="productCounter-middlelistItem"
+                          class="productCounter-listItem"
+                        >
+                          1
+                        </li>
+                        <li class="productCounter-listItem">
+                          <i class="fas fa-plus"></i>
+                        </li>
+                      </ul>
+                    </span>
+                  </td>
+                  <td class="borderclass">
+                    <span class="prices">
+                      <span class="discountedPrice">₺7.333</span
+                      ><span class="updatedPrice">₺4.400</span>
+                    </span>
+                  </td>
+                  <td class="borderclass">
+                    <span class="totalPrice"> ₺1.920 </span>
+                  </td>
+                </tr>
+
+                <tr id="tableRow">
+                  <td class="borderclass couponRow">
+                    <span class="productInfoColumn">
+                        <div class="coupon">
+                          <label for="couponCode" class="couponLabel">
+                            Kupon:
+                            <input
+                              class="couponInput"
+                              placeholder="Kupon kodu"
+                              type="text"
+                              name="couponCode"
+                              id="couponCode"
+                            />
+                          </label>
+                          <span class="couponBtn"> KUPON UYGULA </span>
+                        </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Old Table Starts -->
+          <!--
             <div class="mainContent__productTableHead">
               <ul class="mainContent__productTableHead-list">
                 <li
@@ -197,7 +375,7 @@
               </ul>
             </div>
 
-            <!-- row1 -->
+            
             <div id="row2" class="mainContent__productTableRow">
               <span class="removeIcon">×</span>
 
@@ -235,9 +413,7 @@
               </span>
               <span class="totalPrice"> ₺26.400 </span>
             </div>
-            <!-- row1 -->
-
-            <!-- row2 -->
+            
             <div id="row2" class="mainContent__productTableRow">
               <i id="iconHidden" class="fas fa-times removeIcon"></i>
               <img src="./cartImages/olivia_koltuk_1_2-1000x750.jpg" alt="1" />
@@ -270,9 +446,7 @@
               </span>
               <span class="totalPrice"> ₺5.760 </span>
             </div>
-            <!-- row2 -->
-
-            <!-- row3 -->
+            
             <div id="row3" class="mainContent__productTableRow">
               <i id="iconHidden" class="fas fa-times removeIcon"></i>
 
@@ -306,9 +480,7 @@
               </span>
               <span class="totalPrice"> ₺5.280 </span>
             </div>
-            <!-- row3 -->
-
-            <!-- row4 -->
+            
 
             <div class="mainContent__productTableRow lastRow">
               <div class="coupon">
@@ -326,8 +498,8 @@
               </div>
             </div>
 
-            <!-- row4 -->
-          </div>
+
+          -->
 
           <div class="mainContent__priceTable">
             <div class="mainContent__priceTableHead">
