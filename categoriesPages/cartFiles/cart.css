@@ -67,63 +67,78 @@
   background-color: #ddd;
 }
 
-.mainContent__productTableHead {
-  background-color: #f5f5f5 !important;
-  width: 100% !important;
+/* new Table */
+table {
+  border-collapse: collapse !important;
+  min-width: 700px;
+  max-height: 100%;
 }
 
-.mainContent__productTableHead-listItem {
+table thead {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
-  padding: 1rem !important;
-  color: #000;
+  font-style: normal;
+  background-color: #f5f5f5;
 }
-.productInfoColumn {
-  display: flex;
-  align-items: center;
-}
-table {
-  border-collapse: collapse;
+table td {
+  padding: 1rem;
+  width: 10rem;
   border: 1px solid rgba(230, 230, 230, 0.5);
+  line-height: 1rem;
 }
-.borderclass {
-  border-bottom: 1px solid rgba(230, 230, 230, 0.5);
+table thead td {
+  line-height: 1.5rem;
+}
+table tbody .removeIconTd {
   border-right: none;
-  border-collapse: collapse;
 }
-#tableRow {
-  line-height: 1.2rem;
+table tbody .Image {
+  border-left: none;
+  border-right: none;
+}
+table tbody .Info {
+  border-right: none;
+  border-left: none;
 }
 
-/*
-.mainContent__productTableRow {
-  display: flex;
-  border: 1px solid rgba(230, 230, 230, 0.5);
-  align-items: center;
-  padding: 0.8rem;
-  justify-content: flex-start !important;
+.tfootLeft {
+  width: 100% !important;
 }
-*/
-.mainContent__productTable img {
-  width: 15%;
-  margin-left: 2rem;
-  margin-right: 3rem;
+
+table tbody .removeIconTd {
+  width: 10%;
+  padding-right: 0.8rem !important;
+  position: relative;
+}
+
+table tbody .Info {
+  width: 20%;
+  padding-left: 0;
+}
+table tbody .Image {
+  width: 60px;
+  padding-left: 0;
+}
+table tbody .removeIconTd {
+  width: 0px;
+  padding-left: 3rem;
 }
 
 .removeIcon {
   border: 1.9px solid #e6e6e6;
   border-radius: 50%;
-  text-align: center;
-  padding: 1rem 0.3rem;
-  padding-top: 0.5rem;
-  font-size: 1.3rem;
-  height: 1.3rem;
+  top: 50%;
+  left: calc(50% + 0rem);
+  transform: translate(-50%, -50%);
+  padding: 0.5rem 0.2rem;
+  padding-bottom: 0.8rem;
+  line-height: 0rem !important;
+  font-size: 1.4rem;
   font-weight: 400;
-  line-height: 0.23;
-  margin-left: 1.5rem;
-  margin-right: 0.5rem;
+  cursor: pointer;
+  position: absolute;
 }
 
 .removeIcon:hover {
@@ -132,23 +147,12 @@ table {
   outline: unset;
   color: #fff !important;
 }
-
-#iconHidden {
-  visibility: hidden;
-}
-
-.couponRow {
-  padding: 0.8rem;
-}
-
 .productInfo {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 14px;
   color: #000;
-  margin-right: 1%;
-  width: 50%;
 }
 .productName:hover {
   color: #695d4f;
@@ -187,11 +191,7 @@ table {
   border-right: none;
   color: #000;
 }
-.prices {
-  padding-right: 1rem;
-  margin-left: 2.8rem;
-  margin-right: 3.2rem;
-}
+
 .discountedPrice {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -210,13 +210,54 @@ table {
 }
 
 .totalPrice {
-  padding-right: 2rem;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
   color: #695d4f;
-  width: 9%;
+}
+
+table tbody td {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.totalTd {
+  border-left: none;
+  width: 20%;
+}
+.pricesTd {
+  border-right: none;
+  border-left: none;
+}
+.counterTd {
+  border-right: none;
+  border-left: none;
+  width: 100px !important;
+}
+table img {
+  width: 70%;
+}
+thead .counterTd,
+thead .pricesTd,
+thead .totalTd {
+  width: 10% !important;
+}
+thead .productTd,
+tr .removeIconTd,
+tr .infoTd,
+tr .Image {
+  width: 5% !important;
+}
+tr .Image {
+  width: 10% !important;
+}
+thead .productTd {
+  padding-right: 3%;
+  border-right: none !important;
+}
+thead .totalTd,
+tr .totalTd {
+  width: 5% !important;
 }
 
 .coupon {
@@ -244,6 +285,7 @@ table {
   width: 75%;
 }
 .couponBtn {
+  width: 10rem;
   font-family: "Cerebri-Sans-Bold";
   font-weight: 500;
   font-size: 12px;
@@ -279,11 +321,12 @@ input:focus {
 }
 @media (max-width: 850px) {
   .mainContent__productTable {
-    overflow-x: scroll;
-    max-height: 40%;
+    max-height: 44%;
+    overflow-x: scroll !important;
+    overflow-y: hidden;
   }
-  .mainContent__productTableRow img {
-    width: 5rem !important;
+  table img {
+    width: 100%;
   }
   .mainContent__productTableRow,
   .mainContent__productTableHead {
@@ -293,10 +336,19 @@ input:focus {
     display: flex;
     flex-direction: column;
   }
+  table td {
+    line-height: 1.5rem;
+  }
+  thead .productTd {
+    padding-right: 0;
+  }
 }
 @media (max-width: 600px) {
-  .mainContent__productTableRow img {
-    width: 20%;
+  .mainContent__productTable {
+    max-height: 42%;
+  }
+  table img {
+    width: 100%;
   }
 }
 
